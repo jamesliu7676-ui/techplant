@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台灣科技廠房海選清單</title>
+<style>
+  :root { --bg:#0f172a; --panel:#1e293b; --panel2:#273449; --border:#334155; --text:#e2e8f0; --muted:#94a3b8; --accent:#38bdf8; --warn:#f59e0b; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:"Segoe UI","Microsoft JhengHei",sans-serif; }
+  header { padding:20px 26px; background:linear-gradient(90deg,#0c4a6e,#0f172a); border-bottom:1px solid var(--border); }
+  h1 { margin:0 0 6px; font-size:22px; }
+  header p { margin:0; color:var(--muted); font-size:13px; }
+  .nav-link { display:inline-block; margin-top:12px; padding:7px 11px; border:1px solid rgba(125, 211, 252, .45); border-radius:7px; color:#bae6fd; background:rgba(14, 116, 144, .18); font-size:12px; text-decoration:none; }
+  .nav-link:hover { background:rgba(56, 189, 248, .25); color:#fff; }
+  .toolbar { display:flex; gap:10px; flex-wrap:wrap; padding:14px 26px; background:var(--panel); border-bottom:1px solid var(--border); }
+  select,input,button { background:var(--panel2); color:var(--text); border:1px solid var(--border); border-radius:6px; padding:8px 10px; font-size:13px; }
+  select,input { min-width:170px; }
+  button { cursor:pointer; }
+  button:hover { border-color:var(--accent); color:var(--accent); }
+  .stats { display:flex; gap:10px; flex-wrap:wrap; padding:14px 26px; }
+  .stat { padding:10px 18px; background:var(--panel2); border:1px solid var(--border); border-radius:8px; }
+  .stat b { color:var(--accent); font-size:20px; display:block; }
+  .stat span { color:var(--muted); font-size:12px; }
+  .wrap { padding:0 26px 30px; overflow-x:auto; }
+  table { width:100%; min-width:1250px; border-collapse:separate; border-spacing:0; background:var(--panel); border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+  th,td { padding:10px 11px; border-bottom:1px solid var(--border); text-align:left; vertical-align:top; font-size:13px; }
+  th { position:sticky; top:0; z-index:1; background:#164e63; color:#dff6ff; white-space:nowrap; }
+  tr:last-child td { border-bottom:0; }
+  tr:hover td { background:#20364e; }
+  .company { font-weight:700; color:var(--accent); white-space:nowrap; }
+  .muted { color:var(--muted); font-size:12px; }
+  .badge { display:inline-block; padding:3px 7px; border-radius:12px; background:#1e3a5f; color:#bfdbfe; white-space:nowrap; }
+  .site-status { display:inline-block; padding:3px 8px; border-radius:12px; font-weight:600; white-space:nowrap; }
+  .site-status-planning { background:#e2e8f0; color:#475569; }
+  .site-status-land { background:#dbeafe; color:#1d4ed8; }
+  .site-status-new { background:#ffedd5; color:#c2410c; }
+  .site-status-rebuild { background:#f3e8ff; color:#7e22ce; }
+  .site-status-expand { background:#dcfce7; color:#15803d; }
+  .site-status-operating { background:#e0f2fe; color:#0369a1; }
+  .unknown { color:var(--muted); }
+  .note { max-width:310px; line-height:1.5; }
+  a { color:var(--accent); }
+  .empty { padding:40px; color:var(--muted); text-align:center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>台灣科技廠房海選清單</h1>
+  <p>第一、二階段：先攤出台灣主要科技公司的營運廠區、土地規模與廠房設定；未公開坪數保留空白，避免把推估值誤當實數。</p>
+  <a class="nav-link" href="index.html">切換至首頁地圖</a>
+</header>
+<div class="toolbar">
+  <select id="industry"><option value="">全部產業</option></select>
+  <select id="county"><option value="">全部縣市</option></select>
+  <select id="status"><option value="">全部據點狀態</option></select>
+  <input id="search" placeholder="搜尋公司、園區、廠房設定">
+  <button id="export">匯出 CSV</button>
+  <button id="clear">重設</button>
+</div>
+<div class="stats" id="stats"></div>
+<div class="wrap">
+  <table>
+    <thead><tr>
+      <th>公司</th><th>產業</th><th>縣市/區</th><th>園區/位置</th><th>廠區名稱</th>
+      <th>據點狀態</th><th>土地坪數</th><th>建物/樓地板坪數</th><th>廠房設定</th><th>資料狀態/備註</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+</div>
+<script src="data/data.js"></script>
+<script>
+(function () {
+  const db = window.TECH_DB;
+  const companies = new Map(db.companies.map(c => [c.id, c]));
+  const sites = db.screening_sites || [];
+  let filters = { industry:"", county:"", status:"", search:"" };
+
+  function esc(value) {
+    return String(value ?? "").replace(/[&<>\"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch]));
+  }
+  function displaySiteStatus(status) {
+    if (status.includes("規劃")) return "規劃中";
+    if (status.includes("土地取得")) return "土地取得";
+    if (status.includes("施工") || status.includes("新建")) return "新建中";
+    if (status.includes("改造") || status.includes("轉讓") || status.includes("資產出售") || status.includes("資產調整") || status.includes("部分資產交易")) return "改造中";
+    if (status.includes("擴建") || status.includes("升級") || status.includes("擴產")) return "擴建中";
+    return "營運中";
+  }
+  function siteStatusClass(status) {
+    return { "規劃中":"site-status-planning", "土地取得":"site-status-land", "新建中":"site-status-new", "改造中":"site-status-rebuild", "擴建中":"site-status-expand", "營運中":"site-status-operating" }[status] || "site-status-operating";
+  }
+  function filtered() {
+    return sites.filter(s => {
+      const c = companies.get(s.company_id);
+      const text = [c.name, c.industry, s.county, s.district, s.park, s.site_name, s.facility_setting, s.note].join(" ");
+      return (!filters.industry || c.industry === filters.industry) &&
+        (!filters.county || s.county === filters.county) &&
+        (!filters.status || displaySiteStatus(s.site_status) === filters.status) &&
+        (!filters.search || text.toLowerCase().includes(filters.search.toLowerCase()));
+    });
+  }
+  function render() {
+    const list = filtered();
+    document.getElementById("rows").innerHTML = list.length ? list.map(s => {
+      const c = companies.get(s.company_id);
+      return `<tr>
+        <td><div class="company">${esc(c.name)}</div><div class="muted">${esc(c.name_en)} ${c.listed_code ? "｜" + esc(c.listed_code) : ""}</div></td>
+        <td><span class="badge">${esc(c.industry)}</span></td>
+        <td>${esc(s.county)}<br><span class="muted">${esc(s.district)}</span></td>
+        <td>${esc(s.park)}</td>
+        <td>${esc(s.site_name)}</td>
+        <td><span class="site-status ${siteStatusClass(displaySiteStatus(s.site_status))}">${displaySiteStatus(s.site_status)}</span></td>
+        <td>${s.land_area_ping ? Number(s.land_area_ping).toLocaleString() + " 坪" : '<span class="unknown">未公開</span>'}</td>
+        <td>${s.building_area_ping ? Number(s.building_area_ping).toLocaleString() + " 坪" : '<span class="unknown">未公開</span>'}</td>
+        <td>${esc(s.facility_setting)}</td>
+        <td class="note"><div class="muted">${esc(s.data_status)}</div>${esc(s.note)}${s.source_url ? ` <a href="${esc(s.source_url)}" target="_blank">來源</a>` : ""}</td>
+      </tr>`;
+    }).join("") : '<tr><td colspan="10" class="empty">沒有符合條件的據點</td></tr>';
+    const counties = new Set(list.map(s => s.county));
+    const companiesInList = new Set(list.map(s => s.company_id));
+    const landKnown = list.filter(s => s.land_area_ping).length;
+    document.getElementById("stats").innerHTML =
+      `<div class="stat"><b>${companiesInList.size}</b><span>公司</span></div>` +
+      `<div class="stat"><b>${list.length}</b><span>海選據點</span></div>` +
+      `<div class="stat"><b>${counties.size}</b><span>布局縣市</span></div>` +
+      `<div class="stat"><b>${landKnown}</b><span>已有土地坪數</span></div>`;
+  }
+  function init() {
+    const industries = [...new Set(db.companies.filter(c => sites.some(s => s.company_id === c.id)).map(c => c.industry))].sort();
+    const counties = [...new Set(sites.map(s => s.county))].sort();
+    const statuses = ["規劃中", "土地取得", "新建中", "改造中", "擴建中", "營運中"];
+    document.getElementById("industry").innerHTML += industries.map(v => `<option>${esc(v)}</option>`).join("");
+    document.getElementById("county").innerHTML += counties.map(v => `<option>${esc(v)}</option>`).join("");
+    document.getElementById("status").innerHTML += statuses.map(v => `<option>${esc(v)}</option>`).join("");
+    ["industry","county","status"].forEach(id => document.getElementById(id).addEventListener("change", e => { filters[id] = e.target.value; render(); }));
+    document.getElementById("search").addEventListener("input", e => { filters.search = e.target.value; render(); });
+    document.getElementById("clear").addEventListener("click", () => { filters = { industry:"", county:"", status:"", search:"" }; document.querySelectorAll("select,input").forEach(e => e.value = ""); render(); });
+    document.getElementById("export").addEventListener("click", exportCsv);
+    render();
+  }
+  function exportCsv() {
+    const header = ["公司","產業","縣市","區","園區","廠區名稱","據點狀態","土地坪數","建物坪數","廠房設定","資料狀態","備註","來源"];
+    const lines = [header].concat(filtered().map(s => { const c = companies.get(s.company_id); return [c.name,c.industry,s.county,s.district,s.park,s.site_name,displaySiteStatus(s.site_status),s.land_area_ping || "",s.building_area_ping || "",s.facility_setting,s.data_status,s.note,s.source_url || ""]; })).map(row => row.map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(","));
+    const blob = new Blob(["\ufeff" + lines.join("\n")], { type:"text/csv;charset=utf-8" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "taiwan_tech_factory_screening.csv"; a.click();
+  }
+  init();
+})();
+</script>
+</body>
+</html>

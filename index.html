@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台灣科技廠房新建案地圖</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --panel2: #273449;
+    --border: #334155;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --red: #ef4444;
+    --orange: #f59e0b;
+    --blue: #3b82f6;
+    --green: #22c55e;
+    --gray: #94a3b8;
+    --purple: #a855f7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+    min-height: 100vh;
+  }
+  header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(90deg, #0c4a6e, #0f172a);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  header h1 { font-size: 20px; letter-spacing: 1px; }
+  header .sub { color: var(--muted); font-size: 13px; }
+  header .updated { margin-left: auto; color: var(--muted); font-size: 12px; }
+  .nav-link { padding: 7px 11px; border: 1px solid rgba(125, 211, 252, .45); border-radius: 7px; color: #bae6fd; background: rgba(14, 116, 144, .18); font-size: 12px; text-decoration: none; }
+  .nav-link:hover { background: rgba(56, 189, 248, .25); color: #fff; }
+  .stats {
+    display: flex; gap: 16px; padding: 14px 24px; flex-wrap: wrap;
+    background: var(--panel); border-bottom: 1px solid var(--border);
+  }
+  .stat {
+    background: var(--panel2); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 18px; text-align: center;
+  }
+  .stat .num { font-size: 22px; font-weight: 700; color: var(--accent); }
+  .stat .lbl { font-size: 12px; color: var(--muted); }
+  main { display: grid; grid-template-columns: 1fr 400px; gap: 0; min-height: calc(100vh - 160px); }
+  .map-wrap { padding: 16px; display: flex; align-items: flex-start; justify-content: center; background: linear-gradient(145deg, #e8eef4 0%, #dbe7ef 100%); }
+  .map-stage { position: relative; width: min(100%, 760px); }
+  .map-caption { position: absolute; top: 14px; left: 14px; z-index: 2; padding: 8px 11px; border: 1px solid rgba(30, 64, 86, .18); border-radius: 8px; background: rgba(255, 255, 255, .84); backdrop-filter: blur(8px); color: #1e3a56; font-size: 12px; letter-spacing: .4px; pointer-events: none; box-shadow: 0 5px 18px rgba(30, 64, 86, .12); }
+  .map-caption strong { display: block; font-size: 13px; color: #12324b; }
+  .map-caption span { color: #46718e; }
+  #map { display: block; width: 100%; height: auto; border: 1px solid rgba(71, 105, 130, .35); border-radius: 12px; background: #f8fafc; box-shadow: 0 18px 45px rgba(30, 64, 86, .17); }
+  .county-shape { stroke: #9fb1be; stroke-width: .65; vector-effect: non-scaling-stroke; transition: fill .2s, stroke .2s; cursor: pointer; }
+  .county-shape:hover { stroke: #1d526f; stroke-width: 1.25; filter: brightness(1.04); }
+  .county-label { fill: #405e71; font-size: 11px; font-weight: 700; letter-spacing: .3px; paint-order: stroke; stroke: #f8fafc; stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+  .park-dot { stroke: #fff; stroke-width: 1.5; }
+  .park-label { fill: #173b53; font-size: 11px; font-weight: 700; paint-order: stroke; stroke: rgba(255, 255, 255, .92); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+  .park-label-sub { fill: #50748a; font-size: 9px; font-weight: 600; paint-order: stroke; stroke: rgba(255, 255, 255, .92); stroke-width: 2.5px; stroke-linejoin: round; pointer-events: none; }
+  .marker { cursor: pointer; stroke: #fff; stroke-width: 1; }
+  .marker:hover { filter: brightness(1.5); }
+  .marker.dim { opacity: 0.18; }
+  .screening-marker { cursor: pointer; stroke: #fff; stroke-width: 1; opacity: 0.9; }
+  .screening-marker:hover { filter: brightness(1.5); }
+  .screening-marker.dim { opacity: 0.12; }
+  .legend { font-size: 12px; color: #486477; margin-top: 8px; }
+  .legend-item { display: inline-flex; align-items: center; gap: 6px; margin-right: 14px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .side {
+    background: var(--panel); border-left: 1px solid var(--border);
+    display: flex; flex-direction: column; max-height: calc(100vh - 160px); overflow: hidden;
+  }
+  .filters { padding: 14px; border-bottom: 1px solid var(--border); }
+  .filters label { font-size: 12px; color: var(--muted); display: block; margin-bottom: 4px; }
+  .filters select, .filters input {
+    width: 100%; padding: 7px 10px; margin-bottom: 10px;
+    background: var(--panel2); color: var(--text); border: 1px solid var(--border); border-radius: 6px; font-size: 13px;
+  }
+  .status-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+  .status-btns button {
+    padding: 5px 10px; font-size: 12px; border-radius: 20px;
+    background: var(--panel2); color: var(--text); border: 1px solid var(--border); cursor: pointer;
+  }
+  .status-btns button.active { background: var(--accent); color: #082f49; border-color: var(--accent); font-weight: 700; }
+  .status-btns button[data-s="規劃中"].active { background: var(--gray); }
+  .status-btns button[data-s="土地取得"].active { background: var(--blue); }
+  .status-btns button[data-s="新建中"].active { background: var(--orange); }
+  .side-body { overflow-y: auto; flex: 1; padding: 14px; }
+  .county-summary { margin-bottom: 18px; }
+  .county-summary h3 { font-size: 13px; color: var(--muted); margin-bottom: 8px; letter-spacing: 1px; }
+  .county-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 7px 10px; border-radius: 6px; margin-bottom: 4px; background: var(--panel2);
+    border: 1px solid var(--border); cursor: pointer;
+  }
+  .county-row:hover { border-color: var(--accent); }
+  .county-row.active { border-color: var(--accent); background: #16324a; }
+  .county-row .name { font-size: 13px; }
+  .county-row .meta { font-size: 11px; color: var(--muted); text-align: right; }
+  .county-row .vol { color: var(--accent); font-weight: 700; font-size: 12px; }
+  .heatbar { height: 3px; background: var(--accent); opacity: 0.85; border-radius: 2px; margin-top: 4px; }
+  .projects h3 { font-size: 13px; color: var(--muted); margin-bottom: 8px; letter-spacing: 1px; }
+  .project {
+    background: var(--panel2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px; margin-bottom: 10px; font-size: 13px;
+  }
+  .project .co { font-weight: 700; font-size: 14px; }
+  .project .name { color: var(--accent); }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; margin-left: 6px; }
+  .b-status { color: #fff; }
+  .b-type { background: #1e3a5f; color: #b3d4f0; }
+  .project .loc { color: var(--muted); margin: 4px 0 6px; font-size: 12px; }
+  .kv { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; font-size: 12px; }
+  .kv .k { color: var(--muted); }
+  .kv .v { color: var(--text); }
+  .project .note { margin-top: 6px; color: var(--muted); font-size: 12px; border-top: 1px dashed var(--border); padding-top: 6px; }
+  .project a { color: var(--accent); font-size: 11px; }
+  .toolbar { display: flex; gap: 8px; padding: 10px 14px; border-top: 1px solid var(--border); }
+  .toolbar button {
+    flex: 1; padding: 8px; font-size: 13px; border-radius: 6px; cursor: pointer;
+    background: var(--panel2); color: var(--text); border: 1px solid var(--border);
+  }
+  .toolbar button:hover { background: var(--accent); color: #082f49; }
+  .empty { color: var(--muted); text-align: center; padding: 30px; font-size: 14px; }
+  #tooltip {
+    position: absolute; display: none; background: #0b1220; border: 1px solid var(--accent);
+    border-radius: 6px; padding: 8px 12px; font-size: 12px; max-width: 260px; pointer-events: none; z-index: 99;
+  }
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+    .side { border-left: none; border-top: 1px solid var(--border); max-height: none; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>台灣科技廠房新建案地圖</h1>
+  <span class="sub">全台科技公司土地布局與廠房興建資料庫</span>
+  <span class="updated" id="updated"></span>
+  <a class="nav-link" href="screening.html">切換至海選清單</a>
+</header>
+
+<div class="stats" id="stats"></div>
+
+<main>
+  <div class="map-wrap">
+    <div class="map-stage">
+      <div class="map-caption"><strong>台灣科技產業布局</strong><span>科學園區脈絡 × 廠區據點 × 建設案件</span></div>
+      <svg id="map" width="760" height="820" viewBox="0 0 760 820" role="img" aria-label="台灣科技廠房分布地圖"></svg>
+      <div class="legend" id="legend"></div>
+      <div id="tooltip"></div>
+    </div>
+  </div>
+
+  <div class="side">
+    <div class="filters">
+      <label>產業別</label>
+      <select id="f-industry"><option value="">全部產業</option></select>
+      <label>縣市</label>
+      <select id="f-county"><option value="">全部縣市</option></select>
+      <label>案件狀態</label>
+      <div class="status-btns" id="f-status"></div>
+    </div>
+    <div class="side-body">
+      <div class="county-summary">
+        <h3>縣市案件熱度（依案件數與廠房規模）</h3>
+        <div id="county-list"></div>
+      </div>
+      <div class="projects">
+        <h3>案件列表（<span id="proj-count"></span>）</h3>
+        <div id="project-list"></div>
+      </div>
+    </div>
+    <div class="toolbar">
+      <button id="btn-export">匯出 CSV</button>
+      <button id="btn-reset">重設篩選</button>
+    </div>
+  </div>
+</main>
+
+<script src="data/data.js"></script>
+<script src="data/taiwan_counties.js"></script>
+<script>
+(function () {
+  const DB = window.TECH_DB;
+  const companies = new Map(DB.companies.map(c => [c.id, c]));
+  const projects = DB.projects.filter(p => p.status !== "已完工/投產");
+  const screeningSites = DB.screening_sites || [];
+  const STATUS_COLOR = { "規劃中": "#64748b", "土地取得": "#2563eb", "新建中": "#f97316" };
+
+  function displayStatus(status) {
+    return status === "已動工" || status === "施工中" ? "新建中" : status;
+  }
+
+  function statusMatches(rawStatus, filterStatus) {
+    return filterStatus === "all" || displayStatus(rawStatus) === filterStatus;
+  }
+
+  const COUNTY_FEATURES = (window.TW_COUNTIES.features || []).filter(feature => {
+    const name = feature.properties && (feature.properties.name || feature.properties.COUNTYNAME);
+    return !["澎湖縣", "金門縣", "連江縣"].includes(name);
+  });
+  const MIN_LAT = 21.85, MAX_LAT = 25.35, MIN_LNG = 120.0, MAX_LNG = 122.05;
+  const W = 760, H = 820, MAP_PAD = 34;
+  const MAP_SCALE = Math.min((W - MAP_PAD * 2) / (MAX_LNG - MIN_LNG), (H - MAP_PAD * 2) / (MAX_LAT - MIN_LAT));
+  const MAP_X_OFFSET = (W - (MAX_LNG - MIN_LNG) * MAP_SCALE) / 2;
+  const MAP_Y_OFFSET = (H - (MAX_LAT - MIN_LAT) * MAP_SCALE) / 2;
+  function project(lat, lng) {
+    return [MAP_X_OFFSET + (lng - MIN_LNG) * MAP_SCALE, H - MAP_Y_OFFSET - (lat - MIN_LAT) * MAP_SCALE];
+  }
+  const COUNTY_POS = {
+    "台北市": [25.05, 121.52], "新北市": [25.00, 121.45], "基隆市": [25.13, 121.74],
+    "桃園市": [24.99, 121.28], "新竹縣": [24.84, 121.00], "新竹市": [24.80, 120.97],
+    "苗栗縣": [24.56, 120.82], "台中市": [24.15, 120.67], "彰化縣": [24.07, 120.54],
+    "南投縣": [23.96, 120.98], "雲林縣": [23.71, 120.43], "嘉義縣": [23.47, 120.44],
+    "台南市": [23.00, 120.23], "高雄市": [22.62, 120.31], "屏東縣": [22.55, 120.62],
+    "宜蘭縣": [24.75, 121.75], "花蓮縣": [23.98, 121.35], "台東縣": [22.76, 121.15]
+  };
+  const PARKS = [
+    { name: "竹科", sub: "新竹科學園區", lat: 24.78, lng: 120.99, color: "#0ea5e9" },
+    { name: "竹南／銅鑼", sub: "竹南、銅鑼科技聚落", lat: 24.58, lng: 120.83, color: "#f97316" },
+    { name: "桃園／龍潭", sub: "桃園、龍潭科技聚落", lat: 24.86, lng: 121.20, color: "#22c55e" },
+    { name: "中科", sub: "中部科學園區", lat: 24.22, lng: 120.62, color: "#eab308" },
+    { name: "嘉科", sub: "嘉義科學園區", lat: 23.47, lng: 120.34, color: "#14b8a6" },
+    { name: "南科", sub: "南部科學園區", lat: 23.10, lng: 120.28, color: "#8b5cf6" },
+    { name: "高雄", sub: "楠梓／橋頭科技聚落", lat: 22.73, lng: 120.34, color: "#ef4444" },
+    { name: "屏東", sub: "屏東科技聚落", lat: 22.70, lng: 120.55, color: "#ec4899" }
+  ];
+
+  let fIndustry = "", fCounty = "", fStatus = "all";
+  let selectedProject = null;
+
+  const svg = document.getElementById("map");
+
+  function countyName(feature) {
+    const name = feature.properties && (feature.properties.name || feature.properties.COUNTYNAME);
+    return name === "桃園縣" ? "桃園市" : name;
+  }
+
+  function ringPath(ring) {
+    return ring.map((point, index) => {
+      const [x, y] = project(point[1], point[0]);
+      return (index === 0 ? "M" : "L") + x.toFixed(2) + "," + y.toFixed(2);
+    }).join(" ") + " Z";
+  }
+
+  function geometryPath(geometry) {
+    if (geometry.type === "Polygon") return geometry.coordinates.map(ringPath).join(" ");
+    return geometry.coordinates.map(polygon => polygon.map(ringPath).join(" ")).join(" ");
+  }
+
+  function countyHeat(county) {
+    const projectCount = projects.filter(p => p.county === county).length;
+    const siteCount = screeningSites.filter(s => s.county === county).length;
+    return projectCount * 2 + siteCount;
+  }
+
+  function countyFill(county) {
+    const heat = countyHeat(county);
+    const maxHeat = Math.max(1, ...COUNTY_FEATURES.map(feature => countyHeat(countyName(feature))));
+    const alpha = heat ? 0.18 + (heat / maxHeat) * 0.42 : 0.09;
+    return "rgba(38, 132, 190, " + alpha.toFixed(2) + ")";
+  }
+
+  function renderParkLabels() {
+    const ns = "http://www.w3.org/2000/svg";
+    const group = document.createElementNS(ns, "g");
+    group.setAttribute("class", "park-labels");
+    PARKS.forEach(park => {
+      const [x, y] = project(park.lat, park.lng);
+      const dot = document.createElementNS(ns, "circle");
+      dot.setAttribute("class", "park-dot");
+      dot.setAttribute("cx", x); dot.setAttribute("cy", y); dot.setAttribute("r", 6);
+      dot.setAttribute("fill", park.color);
+      const label = document.createElementNS(ns, "text");
+      label.setAttribute("class", "park-label");
+      label.setAttribute("x", x + 9); label.setAttribute("y", y - 2);
+      label.textContent = park.name;
+      const sub = document.createElementNS(ns, "text");
+      sub.setAttribute("class", "park-label-sub");
+      sub.setAttribute("x", x + 9); sub.setAttribute("y", y + 11);
+      sub.textContent = park.sub;
+      group.appendChild(dot); group.appendChild(label); group.appendChild(sub);
+    });
+    svg.appendChild(group);
+  }
+
+  function renderMap() {
+    svg.innerHTML = "";
+    const ns = "http://www.w3.org/2000/svg";
+    COUNTY_FEATURES.forEach(feature => {
+      const county = countyName(feature);
+      const shape = document.createElementNS(ns, "path");
+      shape.setAttribute("d", geometryPath(feature.geometry));
+      shape.setAttribute("class", "county-shape");
+      shape.setAttribute("fill", countyFill(county));
+      shape.addEventListener("click", () => {
+        fCounty = county;
+        document.getElementById("f-county").value = county;
+        renderAll();
+      });
+      svg.appendChild(shape);
+    });
+    for (const [county, [lat, lng]] of Object.entries(COUNTY_POS)) {
+      const [x, y] = project(lat, lng);
+      const t = document.createElementNS(ns, "text");
+      t.setAttribute("x", x); t.setAttribute("y", y);
+      t.setAttribute("class", "county-label");
+      t.setAttribute("text-anchor", "middle");
+      t.textContent = county.replace("市", "").replace("縣", "");
+      svg.appendChild(t);
+    }
+    renderParkLabels();
+    renderMarkers();
+  }
+
+  function visibleProjects() {
+    return projects.filter(p =>
+      (!fIndustry || companies.get(p.company_id).industry === fIndustry) &&
+      (!fCounty || p.county === fCounty) &&
+      statusMatches(p.status, fStatus)
+    );
+  }
+
+  function markerRadius(p) {
+    const scale = p.floor_area_ping || p.land_area_ping || 0;
+    const base = scale ? 7 + Math.sqrt(scale) / 28 : 7;
+    const sizeBoost = p.type === "新建晶圓廠" ? 3 : p.type === "新建封裝廠" ? 1 : 0;
+    return Math.min(24, base + sizeBoost);
+  }
+
+  function screeningPosition(site, index) {
+    const base = COUNTY_POS[site.county] || [24.0, 120.9];
+    const countySites = screeningSites.filter(s => s.county === site.county);
+    const localIndex = countySites.indexOf(site);
+    const angle = (localIndex % 6) * Math.PI / 3;
+    const ring = 0.025 + Math.floor(localIndex / 6) * 0.018;
+    return [base[0] + Math.sin(angle) * ring, base[1] + Math.cos(angle) * ring];
+  }
+
+  function renderMarkers() {
+    const visible = visibleProjects();
+    const ids = new Set(visible.map(p => p.id));
+    document.querySelectorAll(".marker").forEach(m => m.remove());
+    document.querySelectorAll(".screening-marker").forEach(m => m.remove());
+    const ns = "http://www.w3.org/2000/svg";
+    const frag = document.createDocumentFragment();
+    projects.forEach(p => {
+      const [x, y] = project(p.lat, p.lng);
+      const c = document.createElementNS(ns, "circle");
+      c.setAttribute("class", "marker" + (ids.has(p.id) ? "" : " dim"));
+      c.setAttribute("cx", x); c.setAttribute("cy", y);
+      c.setAttribute("r", markerRadius(p));
+      c.setAttribute("fill", STATUS_COLOR[displayStatus(p.status)] || STATUS_COLOR["規劃中"]);
+      c.setAttribute("data-id", p.id);
+      const title = document.createElementNS(ns, "title");
+      title.textContent = companies.get(p.company_id).name + "｜" + p.name + "｜" + displayStatus(p.status);
+      c.appendChild(title);
+      c.addEventListener("click", () => selectProject(p.id));
+      c.addEventListener("mousemove", e => showTip(e, p));
+      c.addEventListener("mouseleave", hideTip);
+      frag.appendChild(c);
+    });
+    screeningSites.forEach((site, index) => {
+      const company = companies.get(site.company_id);
+      const visible = (!fIndustry || company.industry === fIndustry) &&
+        (!fCounty || site.county === fCounty) && fStatus === "all";
+      const [lat, lng] = screeningPosition(site, index);
+      const [x, y] = project(lat, lng);
+      const c = document.createElementNS(ns, "circle");
+      c.setAttribute("class", "screening-marker" + (visible ? "" : " dim"));
+      c.setAttribute("cx", x); c.setAttribute("cy", y); c.setAttribute("r", 4.5);
+      c.setAttribute("fill", "#c084fc");
+      const title = document.createElementNS(ns, "title");
+      title.textContent = company.name + "｜" + site.site_name;
+      c.appendChild(title);
+      c.addEventListener("mousemove", e => showSiteTip(e, site));
+      c.addEventListener("mouseleave", hideTip);
+      frag.appendChild(c);
+    });
+    svg.appendChild(frag);
+  }
+
+  function showTip(e, p) {
+    const tip = document.getElementById("tooltip");
+    const land = p.land_area_ping ? "<br>土地：" + p.land_area_ping.toLocaleString() + " 坪" : "";
+    const building = p.floor_area_ping ? "<br>建物：" + p.floor_area_ping.toLocaleString() + " 坪" : "";
+    tip.innerHTML = "<b>" + companies.get(p.company_id).name + "</b> " + p.name + "<br>" +
+      p.county + p.district + "｜" + p.park + "<br>狀態：" + displayStatus(p.status) +
+      land + building;
+    tip.style.display = "block";
+    const wrap = tip.parentElement.getBoundingClientRect();
+    const mx = e.clientX - wrap.left + 14, my = e.clientY - wrap.top + 14;
+    tip.style.left = mx + "px";
+    tip.style.top = (my - tip.offsetHeight - 10) + "px";
+    if (my - tip.offsetHeight - 10 < 0) tip.style.top = my + 14 + "px";
+  }
+  function hideTip() { document.getElementById("tooltip").style.display = "none"; }
+
+  function showSiteTip(e, site) {
+    const tip = document.getElementById("tooltip");
+    const company = companies.get(site.company_id);
+    const land = site.land_area_ping ? "<br>土地：" + site.land_area_ping.toLocaleString() + " 坪" : "";
+    const building = site.building_area_ping ? "<br>建物：" + site.building_area_ping.toLocaleString() + " 坪" : "";
+    tip.innerHTML = "<b>海選據點｜" + company.name + "</b> " + site.site_name + "<br>" +
+      site.county + site.district + "｜" + site.park + "<br>狀態：" + site.site_status +
+      "<br>廠房設定：" + site.facility_setting + land + building;
+    tip.style.display = "block";
+    const wrap = tip.parentElement.getBoundingClientRect();
+    const mx = e.clientX - wrap.left + 14, my = e.clientY - wrap.top + 14;
+    tip.style.left = mx + "px";
+    tip.style.top = (my - tip.offsetHeight - 10) + "px";
+    if (my - tip.offsetHeight - 10 < 0) tip.style.top = my + 14 + "px";
+  }
+
+  function selectProject(id) {
+    selectedProject = id;
+    fCounty = "";
+    document.getElementById("f-county").value = "";
+    renderAll();
+    const el = document.querySelector('.project[data-id="' + id + '"]');
+    if (el) { const selected = projects.find(p => p.id === id); el.scrollIntoView({ behavior: "smooth", block: "center" }); el.style.outline = "2px solid " + (STATUS_COLOR[displayStatus(selected.status)] || STATUS_COLOR["規劃中"]); }
+  }
+
+  function renderCountyList() {
+    const box = document.getElementById("county-list");
+    const visible = visibleProjects();
+    const byCounty = {};
+    visible.forEach(p => {
+       if (!byCounty[p.county]) byCounty[p.county] = { count: 0, scale: 0 };
+       byCounty[p.county].count++;
+       byCounty[p.county].scale += p.floor_area_ping || p.land_area_ping || 0;
+     });
+     const rows = Object.entries(byCounty).sort((a, b) => b[1].scale - a[1].scale || b[1].count - a[1].count);
+     const maxScale = Math.max(1, ...rows.map(r => r[1].scale));
+    box.innerHTML = rows.map(([county, d]) =>
+      '<div class="county-row' + (fCounty === county ? " active" : "") + '" data-county="' + county + '">' +
+         '<div><div class="name">' + county + '</div>' +
+         '<div class="heatbar" style="width:' + Math.max(2, d.scale / maxScale * 100) + '%;"></div></div>' +
+         '<div class="meta">' + d.count + ' 案' + (d.scale ? '<div class="vol">規模 ' + d.scale.toLocaleString() + ' 坪</div>' : '<div class="vol">規模待查</div>') + '</div>' +
+      '</div>'
+    ).join("");
+    box.querySelectorAll(".county-row").forEach(el => {
+      el.addEventListener("click", () => {
+        fCounty = (fCounty === el.dataset.county) ? "" : el.dataset.county;
+        document.getElementById("f-county").value = fCounty;
+        renderAll();
+      });
+    });
+  }
+
+  function renderProjects() {
+    const box = document.getElementById("project-list");
+    const visible = visibleProjects();
+    document.getElementById("proj-count").textContent = visible.length;
+    if (!visible.length) { box.innerHTML = '<div class="empty">沒有符合條件的案件</div>'; return; }
+    box.innerHTML = visible.map(p => {
+      const co = companies.get(p.company_id);
+      const status = displayStatus(p.status);
+      const sc = STATUS_COLOR[status] || STATUS_COLOR["規劃中"];
+      return '<div class="project" data-id="' + p.id + '">' +
+        '<div><span class="co">' + co.name + '</span> ' +
+        '<span class="badge b-status" style="background:' + sc + ';">' + status + '</span>' +
+        '<span class="badge b-type">' + p.type + '</span></div>' +
+        '<div class="name">' + p.name + '</div>' +
+        '<div class="loc">' + p.county + p.district + '｜' + p.park + '</div>' +
+        '<div class="kv">' +
+          (p.land_area_ping ? '<span class="k">土地坪數</span><span class="v">' + p.land_area_ping.toLocaleString() + ' 坪</span>' : '') +
+          (p.floor_area_ping ? '<span class="k">樓地板</span><span class="v">' + p.floor_area_ping.toLocaleString() + ' 坪</span>' : '') +
+          (p.construction_start ? '<span class="k">動工</span><span class="v">' + p.construction_start + '</span>' : '') +
+          (p.completion ? '<span class="k">完工/投產</span><span class="v">' + p.completion + '</span>' : '') +
+        '</div>' +
+        '<div class="note">' + p.note +
+          (p.source_url ? ' <a href="' + p.source_url + '" target="_blank">來源</a>' : '') +
+        '</div>' +
+      '</div>';
+    }).join("");
+  }
+
+  function renderStats() {
+     const withScale = projects.filter(p => p.land_area_ping || p.floor_area_ping).length;
+    document.getElementById("stats").innerHTML =
+      '<div class="stat"><div class="num">' + companies.size + '</div><div class="lbl">科技公司</div></div>' +
+      '<div class="stat"><div class="num">' + projects.length + '</div><div class="lbl">興建/取得案件</div></div>' +
+      '<div class="stat"><div class="num">' + new Set(projects.map(p => p.county)).size + '</div><div class="lbl">布局縣市</div></div>' +
+       '<div class="stat"><div class="num">' + withScale + '</div><div class="lbl">已有土地/建物規模</div></div>';
+    document.getElementById("updated").textContent = "資料更新：" + DB.meta.updated;
+    const legend = document.getElementById("legend");
+    legend.innerHTML = Object.entries(STATUS_COLOR).map(([k, v]) =>
+      '<span class="legend-item"><span class="legend-dot" style="background:' + v + ';"></span>' + k + '</span>'
+    ).join("") + '<span class="legend-item"><span class="legend-dot" style="background:#c084fc;"></span>海選據點</span>' +
+      '<span class="legend-item">彩色標籤＝主要科學園區／科技聚落</span>';
+  }
+
+  function renderAll() {
+    renderCountyList();
+    renderProjects();
+    renderMarkers();
+    if (fCounty) {
+      const row = document.querySelector('.county-row[data-county="' + fCounty + '"]');
+      if (row) row.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }
+
+  function initFilters() {
+    const industries = [...new Set(DB.companies.map(c => c.industry))].sort();
+    document.getElementById("f-industry").innerHTML = '<option value="">全部產業</option>' +
+      industries.map(i => '<option value="' + i + '">' + i + '</option>').join("");
+    const counties = [...new Set(projects.map(p => p.county))].sort();
+    document.getElementById("f-county").innerHTML = '<option value="">全部縣市</option>' +
+      counties.map(c => '<option value="' + c + '">' + c + '</option>').join("");
+    document.getElementById("f-status").innerHTML = '<button data-s="all" class="active">全部</button>' +
+      DB.meta.statuses.map(s => '<button data-s="' + s + '">' + s + '</button>').join("");
+    document.getElementById("f-status").querySelectorAll("button").forEach(b => {
+      b.addEventListener("click", () => {
+        document.getElementById("f-status").querySelectorAll("button").forEach(x => x.classList.remove("active"));
+        b.classList.add("active");
+        fStatus = b.dataset.s;
+        renderAll();
+      });
+    });
+    document.getElementById("f-industry").addEventListener("change", e => { fIndustry = e.target.value; renderAll(); });
+    document.getElementById("f-county").addEventListener("change", e => { fCounty = e.target.value; renderAll(); });
+  }
+
+  function exportCSV() {
+     const rows = [["公司", "產業", "案件", "縣市", "區", "園區", "廠房類型", "狀態", "土地坪數", "樓地板坪數", "動工", "完工/投產", "備註", "來源"]];
+    projects.forEach(p => {
+      const co = companies.get(p.company_id);
+      rows.push([co.name, co.industry, p.name, p.county, p.district, p.park, p.type, displayStatus(p.status),
+         p.land_area_ping || "", p.floor_area_ping || "", p.construction_start || "", p.completion || "",
+        (p.note || "").replace(/[\n,]/g, " "), p.source_url || ""]);
+    });
+    const csv = rows.map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(",")).join("\n");
+    const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "taiwan_tech_factory_" + DB.meta.updated + ".csv";
+    a.click();
+  }
+
+  document.getElementById("btn-export").addEventListener("click", exportCSV);
+  document.getElementById("btn-reset").addEventListener("click", () => {
+    fIndustry = ""; fCounty = ""; fStatus = "all"; selectedProject = null;
+    document.getElementById("f-industry").value = "";
+    document.getElementById("f-county").value = "";
+    document.getElementById("f-status").querySelectorAll("button").forEach((x, i) => x.classList.toggle("active", i === 0));
+    renderAll();
+  });
+
+  initFilters();
+  renderStats();
+  renderMap();
+  renderCountyList();
+  renderProjects();
+})();
+</script>
+</body>
+</html>
