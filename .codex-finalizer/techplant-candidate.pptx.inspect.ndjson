@@ -1,0 +1,105 @@
+{"kind":"deck","id":"pr/7pzs25","name":"Deck"}
+{"kind":"layout","layoutId":"55e3c9ee-cad1-4213-8687-71ba91e97258","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"be3126dd-3108-4bd7-ac83-e46302ed8557","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/wpnqct","slide":1,"title":"台灣主要科學園區與科技廠房","textShapes":64}
+{"kind":"textbox","id":"sh/d0nm9876","slide":1,"text":"台灣主要科學園區與科技廠房","textPreview":"台灣主要科學園區與科技廠房","textChars":13,"textLines":1,"bbox":[58,30,1164,48]}
+{"kind":"textbox","id":"sh/qxw3et8f","slide":1,"text":"依專案資料中的縣市、行政區與經緯度定位","textPreview":"依專案資料中的縣市、行政區與經緯度定位","textChars":19,"textLines":1,"bbox":[60,77,900,28]}
+{"kind":"shape","id":"sh/by547yp0","slide":1,"bbox":[60,112,1160,2]}
+{"kind":"shape","id":"sh/pcnm5o7u","slide":1,"bbox":[62,137,28,28]}
+{"kind":"textbox","id":"sh/29w3at8j","slide":1,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[59,141,34,20]}
+{"kind":"textbox","id":"sh/3a543yp4","slide":1,"text":"北投士林科技園區","textPreview":"北投士林科技園區","textChars":8,"textLines":1,"bbox":[102,135,282,24]}
+{"kind":"textbox","id":"sh/g7ul8jqd","slide":1,"text":"台北市北投區","textPreview":"台北市北投區","textChars":6,"textLines":1,"bbox":[102,156,282,19]}
+{"kind":"textbox","id":"sh/183m1o7y","slide":1,"text":"NVIDIA AI研發中心","textPreview":"NVIDIA AI研發中心","textChars":13,"textLines":1,"bbox":[102,174,282,27]}
+{"kind":"shape","id":"sh/lwfy18n6","slide":1,"bbox":[62,216,28,28]}
+{"kind":"textbox","id":"sh/kv6h83ml","slide":1,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[59,220,34,20]}
+{"kind":"textbox","id":"sh/juxgzy50","slide":1,"text":"龍潭科學園區","textPreview":"龍潭科學園區","textChars":6,"textLines":1,"bbox":[102,214,282,24]}
+{"kind":"textbox","id":"sh/ytoz6t4f","slide":1,"text":"桃園市龍潭區","textPreview":"桃園市龍潭區","textChars":6,"textLines":1,"bbox":[102,235,282,19]}
+{"kind":"textbox","id":"sh/xsfyx8nu","slide":1,"text":"台積電新廠區，待官方確認","textPreview":"台積電新廠區，待官方確認","textChars":12,"textLines":1,"bbox":[102,253,282,27]}
+{"kind":"shape","id":"sh/wrmh43m9","slide":1,"bbox":[62,295,28,28]}
+{"kind":"textbox","id":"sh/bqdgvy5o","slide":1,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[59,299,34,20]}
+{"kind":"textbox","id":"sh/ap4z2t4j","slide":1,"text":"竹科寶山二期","textPreview":"竹科寶山二期","textChars":6,"textLines":1,"bbox":[102,293,282,24]}
+{"kind":"textbox","id":"sh/9ovytony","slide":1,"text":"新竹縣寶山鄉","textPreview":"新竹縣寶山鄉","textChars":6,"textLines":1,"bbox":[102,314,282,19]}
+{"kind":"textbox","id":"sh/onmh0jmd","slide":1,"text":"台積電 P8 2奈米廠","textPreview":"台積電 P8 2奈米廠","textChars":11,"textLines":1,"bbox":[102,332,282,27]}
+{"kind":"shape","id":"sh/07qhgju9","slide":1,"bbox":[62,374,28,28]}
+{"kind":"textbox","id":"sh/18zy9ovu","slide":1,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[59,378,34,20]}
+{"kind":"textbox","id":"sh/e5ozetc3","slide":1,"text":"銅鑼科學園區","textPreview":"銅鑼科學園區","textChars":6,"textLines":1,"bbox":[102,372,282,24]}
+{"kind":"textbox","id":"sh/f6hg7edo","slide":1,"text":"苗栗縣銅鑼鄉","textPreview":"苗栗縣銅鑼鄉","textChars":6,"textLines":1,"bbox":[102,393,282,19]}
+{"kind":"textbox","id":"sh/s36hcjux","slide":1,"text":"美光銅鑼廠","textPreview":"美光銅鑼廠","textChars":5,"textLines":1,"bbox":[102,411,282,27]}
+{"kind":"shape","id":"sh/d4fy5ovi","slide":1,"bbox":[62,453,28,28]}
+{"kind":"textbox","id":"sh/qhoza9c7","slide":1,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[59,457,34,20]}
+{"kind":"textbox","id":"sh/r2xg3edc","slide":1,"text":"中科后里園區","textPreview":"中科后里園區","textChars":6,"textLines":1,"bbox":[102,451,282,24]}
+{"kind":"textbox","id":"sh/czaho3uh","slide":1,"text":"台中市后里區","textPreview":"台中市后里區","textChars":6,"textLines":1,"bbox":[102,472,282,19]}
+{"kind":"textbox","id":"sh/x0jih8v2","slide":1,"text":"美光 A3 廠區擴建","textPreview":"美光 A3 廠區擴建","textChars":10,"textLines":1,"bbox":[102,490,282,27]}
+{"kind":"shape","id":"sh/7ulkn2x4","slide":1,"bbox":[62,532,28,28]}
+{"kind":"textbox","id":"sh/6tcjehwj","slide":1,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[59,536,34,20]}
+{"kind":"textbox","id":"sh/tw32pcfa","slide":1,"text":"中科二期","textPreview":"中科二期","textChars":4,"textLines":1,"bbox":[102,530,282,24]}
+{"kind":"textbox","id":"sh/8vu1g7ep","slide":1,"text":"台中市大雅區","textPreview":"台中市大雅區","textChars":6,"textLines":1,"bbox":[102,551,282,19]}
+{"kind":"textbox","id":"sh/vy5krmx0","slide":1,"text":"台積電 1.4奈米廠","textPreview":"台積電 1.4奈米廠","textChars":10,"textLines":1,"bbox":[102,569,282,27]}
+{"kind":"shape","id":"sh/uxw3ihwf","slide":1,"bbox":[900,137,28,28]}
+{"kind":"textbox","id":"sh/h0n2twf6","slide":1,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[897,141,34,20]}
+{"kind":"textbox","id":"sh/gzelkrel","slide":1,"text":"台中工業區","textPreview":"台中工業區","textChars":5,"textLines":1,"bbox":[940,135,280,24]}
+{"kind":"textbox","id":"sh/b21kfixw","slide":1,"text":"台中市西屯／南屯區","textPreview":"台中市西屯／南屯區","textChars":9,"textLines":1,"bbox":[940,156,280,19]}
+{"kind":"textbox","id":"sh/a1sj6dwb","slide":1,"text":"大立光光通訊、CPO基地","textPreview":"大立光光通訊、CPO基地","textChars":12,"textLines":1,"bbox":[940,174,280,27]}
+{"kind":"shape","id":"sh/2xgbih8j","slide":1,"bbox":[900,216,28,28]}
+{"kind":"textbox","id":"sh/nipsbm94","slide":1,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[897,220,34,20]}
+{"kind":"textbox","id":"sh/ojytkrq9","slide":1,"text":"嘉義科學園區","textPreview":"嘉義科學園區","textChars":6,"textLines":1,"bbox":[940,214,280,24]}
+{"kind":"textbox","id":"sh/pk7udwru","slide":1,"text":"嘉義縣太保市","textPreview":"嘉義縣太保市","textChars":6,"textLines":1,"bbox":[940,235,280,19]}
+{"kind":"textbox","id":"sh/algbm18f","slide":1,"text":"台積電 AP6／AP7","textPreview":"台積電 AP6／AP7","textChars":11,"textLines":1,"bbox":[940,253,280,27]}
+{"kind":"shape","id":"sh/bmpcf690","slide":1,"bbox":[900,295,28,28]}
+{"kind":"textbox","id":"sh/wnitobql","slide":1,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[897,299,34,20]}
+{"kind":"textbox","id":"sh/xoruhwr6","slide":1,"text":"台南科學園區","textPreview":"台南科學園區","textChars":6,"textLines":1,"bbox":[940,293,280,24]}
+{"kind":"textbox","id":"sh/yp0bq18r","slide":1,"text":"台南市新市區","textPreview":"台南市新市區","textChars":6,"textLines":1,"bbox":[940,314,280,19]}
+{"kind":"textbox","id":"sh/jq9cj69w","slide":1,"text":"台積電與日月光擴建","textPreview":"台積電與日月光擴建","textChars":9,"textLines":1,"bbox":[940,332,280,27]}
+{"kind":"shape","id":"sh/tkbe90be","slide":1,"bbox":[900,374,28,28]}
+{"kind":"textbox","id":"sh/8j2dgvat","slide":1,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[897,378,34,20]}
+{"kind":"textbox","id":"sh/7itw7at8","slide":1,"text":"楠梓產業園區","textPreview":"楠梓產業園區","textChars":6,"textLines":1,"bbox":[940,372,280,24]}
+{"kind":"textbox","id":"sh/6hkve5sn","slide":1,"text":"高雄市楠梓區","textPreview":"高雄市楠梓區","textChars":6,"textLines":1,"bbox":[940,393,280,19]}
+{"kind":"textbox","id":"sh/h8vedkba","slide":1,"text":"台積電高雄 P1 至 P3","textPreview":"台積電高雄 P1 至 P3","textChars":13,"textLines":1,"bbox":[940,411,280,27]}
+{"kind":"shape","id":"sh/gnmxkfap","slide":1,"bbox":[900,453,28,28]}
+{"kind":"textbox","id":"sh/vmtwbat4","slide":1,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[897,457,34,20]}
+{"kind":"textbox","id":"sh/ulkvi5sz","slide":1,"text":"橋頭科學園區","textPreview":"橋頭科學園區","textChars":6,"textLines":1,"bbox":[940,451,280,24]}
+{"kind":"textbox","id":"sh/5cvehkbm","slide":1,"text":"高雄市橋頭區","textPreview":"高雄市橋頭區","textChars":6,"textLines":1,"bbox":[940,472,280,19]}
+{"kind":"textbox","id":"sh/4bmxofa1","slide":1,"text":"台積電先進製程廠區，規劃中","textPreview":"台積電先進製程廠區，規劃中","textChars":13,"textLines":1,"bbox":[940,490,280,27]}
+{"kind":"shape","id":"sh/ofuhk3ix","slide":1,"bbox":[900,532,28,28]}
+{"kind":"textbox","id":"sh/pg3yd8ji","slide":1,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[897,536,34,20]}
+{"kind":"textbox","id":"sh/2tczit07","slide":1,"text":"屏東科技園區","textPreview":"屏東科技園區","textChars":6,"textLines":1,"bbox":[940,530,280,24]}
+{"kind":"textbox","id":"sh/3ulgby1s","slide":1,"text":"屏東縣長治鄉","textPreview":"屏東縣長治鄉","textChars":6,"textLines":1,"bbox":[940,551,280,19]}
+{"kind":"textbox","id":"sh/cjeho3i9","slide":1,"text":"半導體材料與設備供應鏈","textPreview":"半導體材料與設備供應鏈","textChars":11,"textLines":1,"bbox":[940,569,280,27]}
+{"kind":"shape","id":"sh/dknyh8zu","slide":1,"bbox":[697.93,158,26,26]}
+{"kind":"textbox","id":"sh/qhczmt03","slide":1,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[693.93,161,34,20]}
+{"kind":"shape","id":"sh/bi5gfy1o","slide":1,"bbox":[656.3,190.19,26,26]}
+{"kind":"textbox","id":"sh/snaxcji5","slide":1,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[652.3,193.19,34,20]}
+{"kind":"shape","id":"sh/tojy5oja","slide":1,"bbox":[629.65,209,26,26]}
+{"kind":"textbox","id":"sh/vu9s76p4","slide":1,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[625.65,212,34,20]}
+{"kind":"shape","id":"sh/ut0by1oj","slide":1,"bbox":[602.47,244.09,26,26]}
+{"kind":"textbox","id":"sh/hgba9gna","slide":1,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[598.47,247.09,34,20]}
+{"kind":"shape","id":"sh/gv2t0b6p","slide":1,"bbox":[593.19,263.96,26,26]}
+{"kind":"textbox","id":"sh/7q9s36p8","slide":1,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[589.19,266.96,34,20]}
+{"kind":"shape","id":"sh/6p0ru1on","slide":1,"bbox":[578.95,282.82,12,5]}
+{"kind":"shape","id":"sh/tsra5g7e","slide":1,"bbox":[565.95,269.82,26,26]}
+{"kind":"textbox","id":"sh/8ri9wb6t","slide":1,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[561.95,272.82,34,20]}
+{"kind":"shape","id":"sh/jmpszmpw","slide":1,"bbox":[594.26,298.15,10,12]}
+{"kind":"shape","id":"sh/ylgrqhob","slide":1,"bbox":[591.26,297.15,26,26]}
+{"kind":"textbox","id":"sh/q5kbm1w7","slide":1,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[587.26,300.15,34,20]}
+{"kind":"shape","id":"sh/b6tsfmxs","slide":1,"bbox":[540.96,371.91,26,26]}
+{"kind":"textbox","id":"sh/c72tored","slide":1,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[536.96,374.91,34,20]}
+{"kind":"shape","id":"sh/x8vahwfy","slide":1,"bbox":[535.13,423.3,26,26]}
+{"kind":"textbox","id":"sh/21krihwb","slide":1,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[531.13,426.3,34,20]}
+{"kind":"shape","id":"sh/32tsbmxw","slide":1,"bbox":[542.9,487.02,10,12]}
+{"kind":"shape","id":"sh/o32tkreh","slide":1,"bbox":[529.9,486.02,26,26]}
+{"kind":"textbox","id":"sh/p4badwf2","slide":1,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[525.9,489.02,34,20]}
+{"kind":"shape","id":"sh/mx4bulwf","slide":1,"bbox":[552.24,471.58,10,12]}
+{"kind":"shape","id":"sh/7ydsnqx0","slide":1,"bbox":[549.24,458.58,26,26]}
+{"kind":"textbox","id":"sh/hszedkz2","slide":1,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[545.24,461.58,34,20]}
+{"kind":"shape","id":"sh/wrqdkfyx","slide":1,"bbox":[569.33,477.2,26,26]}
+{"kind":"textbox","id":"sh/vqxwbahc","slide":1,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[565.33,480.2,34,20]}
+{"kind":"textbox","id":"sh/upovi5gr","slide":1,"text":"● 施工、已動工或土地取得      ● 規劃中或待官方確認","textPreview":"● 施工、已動工或土地取得      ● 規劃中或待官方確認","textChars":30,"textLines":1,"bbox":[60,650,650,22]}
+{"kind":"textbox","id":"sh/94fu90z6","slide":1,"text":"位置為園區／建案定位，資料截至2026年9月7日","textPreview":"位置為園區／建案定位，資料截至2026年9月7日","textChars":24,"textLines":1,"bbox":[760,650,460,22]}
+{"kind":"image","id":"im/9sb2l03y","slide":1,"name":"","alt":"依內政部縣市界資料呈現的台灣行政區地圖","bbox":[408,128,464,486]}
+{"kind":"notes","id":"nt/wpnqct","slide":1,"text":"位置來源：techplant data/taiwan_tech_factory.json 的 lat／lng 欄位，更新日期2026-09-07。行政區底圖來源：專案內 data/taiwan_counties.geojson，原始說明指向內政部統計地理資訊應用系統。高雄楠梓與橋頭位置相近，標號以短引線錯開顯示。地圖代表園區／建案定位，不代表地籍界線或廠區範圍。"}
+{"kind":"slide","id":"sl/vzsxqv","slide":2,"title":"重大科技廠房建案明細","textShapes":3}
+{"kind":"textbox","id":"sh/mxgzidcj","slide":2,"text":"重大科技廠房建案明細","textPreview":"重大科技廠房建案明細","textChars":10,"textLines":1,"bbox":[58,30,1164,48]}
+{"kind":"textbox","id":"sh/907yt8bu","slide":2,"text":"科學園區與重要科技產業聚落，依目前公開資訊整理","textPreview":"科學園區與重要科技產業聚落，依目前公開資訊整理","textChars":23,"textLines":1,"bbox":[60,77,900,28]}
+{"kind":"textbox","id":"sh/vm9gvit0","slide":2,"text":"資料截至2026年9月7日；未公開坪數保留待查；規劃案以官方公告為準","textPreview":"資料截至2026年9月7日；未公開坪數保留待查；規劃案以官方公告為準","textChars":34,"textLines":1,"bbox":[55,650,1170,25]}
+{"kind":"table","id":"tb/ho361onq","slide":2,"name":"","rows":14,"cols":6,"preview":"區域／園區 | 公司 | 重大廠房／建案 | 狀態 | 公開規模 | 資料備註","bbox":[54,116,1172,510]}
+{"kind":"notes","id":"nt/vzsxqv","slide":2,"text":"來源：techplant data/taiwan_tech_factory.json 與 presentation_sources/techplant_major_factories_2026-09-07.md。表格將營運／擴建追蹤與具名新建案分開，未公開坪數不作推估。"}

@@ -1,0 +1,2613 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/vzsxqv",
+    "id": "vzsxqv",
+    "slide": 2,
+    "layoutId": "be3126dd-3108-4bd7-ac83-e46302ed8557",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "55e3c9ee-cad1-4213-8687-71ba91e97258",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FBFCFD",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Microsoft JhengHei"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "be3126dd-3108-4bd7-ac83-e46302ed8557",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "55e3c9ee-cad1-4213-8687-71ba91e97258",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "55e3c9ee-cad1-4213-8687-71ba91e97258",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mxgzidcj",
+      "id": "1",
+      "bbox": [
+        58,
+        30,
+        1164,
+        48
+      ],
+      "geometry": "rect",
+      "text": "重大科技廠房建案明細",
+      "textPreview": "重大科技廠房建案明細",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 34,
+        "typeface": "Microsoft JhengHei",
+        "color": "#102A3A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "autoFitScale": 0.94,
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "重大科技廠房建案明細"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "重大科技廠房建案明細",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Microsoft JhengHei",
+            "color": "#102A3A",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "重大科技廠房建案明細",
+              "fontSize": 34,
+              "typeface": "Microsoft JhengHei",
+              "color": "#102A3A",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/907yt8bu",
+      "id": "2",
+      "bbox": [
+        60,
+        77,
+        900,
+        28
+      ],
+      "geometry": "rect",
+      "text": "科學園區與重要科技產業聚落，依目前公開資訊整理",
+      "textPreview": "科學園區與重要科技產業聚落，依目前公開資訊整理",
+      "resolvedFontSize": 15.33,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 16,
+        "typeface": "Microsoft JhengHei",
+        "color": "#526D7C",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "autoFitScale": 0.96,
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "科學園區與重要科技產業聚落，依目前公開資訊整理"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "科學園區與重要科技產業聚落，依目前公開資訊整理",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Microsoft JhengHei",
+            "color": "#526D7C"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "科學園區與重要科技產業聚落，依目前公開資訊整理",
+              "fontSize": 16,
+              "typeface": "Microsoft JhengHei",
+              "color": "#526D7C"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/ho361onq",
+      "id": "3",
+      "bbox": [
+        54,
+        116,
+        1172,
+        510
+      ],
+      "text": "區域／園區 | 公司 | 重大廠房／建案 | 狀態 | 公開規模 | 資料備註\n北士科 | NVIDIA | AI研發中心 T17／T18 | 規劃中 | 待查 | 地上權案\n龍潭科學園區 | 台積電 | 龍潭新廠區 | 規劃中 | 待查 | 待官方確認\n竹科寶山二期 | 台積電 | 寶山2奈米晶圓廠 P8 | 施工中 | 土地15,000坪\n樓地板70,000坪 | 2奈米主力廠區\n新竹／台南科學園區 | 聯電 | 新竹晶圓廠群、台南12吋廠 | 營運／擴建 | 待查 | 待拆分具名建案\n中科二期 | 台積電 | 台中1.4奈米晶圓廠 | 已動工 | 土地27,000坪\n樓地板80,000坪 | 已取得第一期建照\n中部科學園區 | 美光 | 台中A3廠區擴建 | 施工中 | 待查 | 記憶體擴產\n銅鑼科學園區 | 美光 | 美光銅鑼廠 | 改造中 | 樓地板60,000坪 | 原力積電廠區\n台中工業區 | 大立光 | 光通訊／CPO產能基地 | 土地取得 | 土地13,500坪\n建物13,000坪 | 後續動工待追蹤\n嘉義科學園區 | 台積電 | AP6／AP7先進封裝廠 | 施工中 | 土地12,000坪\n樓地板60,000坪 | CoWoS／SoIC\n台南科學園區 | 台積電／日月光 | 製程與封裝擴建／南科封裝基地 | 施工／已動工 | 台積電樓地板80,000坪\n日月光35,000坪 | 供應鏈同步擴建\n楠梓產業園區 | 台積電 | 高雄2奈米廠 P1至P3 | 施工中 | 土地36,000坪\n樓地板100,000坪 | 三期建設\n橋頭科學園區 | 台積電 | 橋頭先進製程廠區 | 規劃中 | 土地約15,000坪 | 待官方確認\n高雄科技聚落 | 鴻海 | 高雄AI資料中心 | 已動工 | 待查 | AI基礎設施",
+      "textPreview": "區域／園區 | 公司 | 重大廠房／建案 | 狀態 | 公開規模 | 資料備註 | 北士科 | NVIDIA | AI研發中心 T17／T18 | 規劃中 | 待查 | 地上權案 | 龍潭科學園區 | 台積電 | 龍潭新廠區 | 規劃中 | 待查 | 待官方確認 | 竹科寶...",
+      "rows": 14,
+      "cols": 6,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            54,
+            116,
+            170,
+            36.43
+          ],
+          "text": "區域／園區",
+          "textPreview": "區域／園區",
+          "fillColor": "#12384F",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "區域／園區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "區域／園區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            224,
+            116,
+            112,
+            36.43
+          ],
+          "text": "公司",
+          "textPreview": "公司",
+          "fillColor": "#12384F",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "公司",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "公司"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            336,
+            116,
+            278,
+            36.43
+          ],
+          "text": "重大廠房／建案",
+          "textPreview": "重大廠房／建案",
+          "fillColor": "#12384F",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "重大廠房／建案",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "重大廠房／建案"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            614,
+            116,
+            132,
+            36.43
+          ],
+          "text": "狀態",
+          "textPreview": "狀態",
+          "fillColor": "#12384F",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "狀態",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "狀態"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 1,
+          "column": 5,
+          "bbox": [
+            746,
+            116,
+            215,
+            36.43
+          ],
+          "text": "公開規模",
+          "textPreview": "公開規模",
+          "fillColor": "#12384F",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "公開規模",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "公開規模"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 1,
+          "column": 6,
+          "bbox": [
+            961,
+            116,
+            265,
+            36.43
+          ],
+          "text": "資料備註",
+          "textPreview": "資料備註",
+          "fillColor": "#12384F",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "資料備註",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "資料備註"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            54,
+            152.43,
+            170,
+            36.43
+          ],
+          "text": "北士科",
+          "textPreview": "北士科",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "北士科",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "北士科"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            224,
+            152.43,
+            112,
+            36.43
+          ],
+          "text": "NVIDIA",
+          "textPreview": "NVIDIA",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "NVIDIA",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "NVIDIA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            336,
+            152.43,
+            278,
+            36.43
+          ],
+          "text": "AI研發中心 T17／T18",
+          "textPreview": "AI研發中心 T17／T18",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "AI研發中心 T17／T18",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "AI研發中心 T17／T18"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            614,
+            152.43,
+            132,
+            36.43
+          ],
+          "text": "規劃中",
+          "textPreview": "規劃中",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "規劃中",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "規劃中"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 2,
+          "column": 5,
+          "bbox": [
+            746,
+            152.43,
+            215,
+            36.43
+          ],
+          "text": "待查",
+          "textPreview": "待查",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "待查",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "待查"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 2,
+          "column": 6,
+          "bbox": [
+            961,
+            152.43,
+            265,
+            36.43
+          ],
+          "text": "地上權案",
+          "textPreview": "地上權案",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "地上權案",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "地上權案"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            54,
+            188.86,
+            170,
+            36.43
+          ],
+          "text": "龍潭科學園區",
+          "textPreview": "龍潭科學園區",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "龍潭科學園區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "龍潭科學園區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            224,
+            188.86,
+            112,
+            36.43
+          ],
+          "text": "台積電",
+          "textPreview": "台積電",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台積電",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台積電"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            336,
+            188.86,
+            278,
+            36.43
+          ],
+          "text": "龍潭新廠區",
+          "textPreview": "龍潭新廠區",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "龍潭新廠區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "龍潭新廠區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            614,
+            188.86,
+            132,
+            36.43
+          ],
+          "text": "規劃中",
+          "textPreview": "規劃中",
+          "fillColor": "#FFF1D6",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "規劃中",
+              "resolvedTextStyle": {
+                "fontSize": 11.51,
+                "typeface": "Microsoft JhengHei",
+                "color": "#875B00",
+                "bold": true
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "規劃中",
+                  "fontSize": 11.51,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#875B00",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 3,
+          "column": 5,
+          "bbox": [
+            746,
+            188.86,
+            215,
+            36.43
+          ],
+          "text": "待查",
+          "textPreview": "待查",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "待查",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "待查"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 3,
+          "column": 6,
+          "bbox": [
+            961,
+            188.86,
+            265,
+            36.43
+          ],
+          "text": "待官方確認",
+          "textPreview": "待官方確認",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "待官方確認",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "待官方確認"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            54,
+            225.29,
+            170,
+            36.43
+          ],
+          "text": "竹科寶山二期",
+          "textPreview": "竹科寶山二期",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "竹科寶山二期",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "竹科寶山二期"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            224,
+            225.29,
+            112,
+            36.43
+          ],
+          "text": "台積電",
+          "textPreview": "台積電",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台積電",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台積電"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            336,
+            225.29,
+            278,
+            36.43
+          ],
+          "text": "寶山2奈米晶圓廠 P8",
+          "textPreview": "寶山2奈米晶圓廠 P8",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "寶山2奈米晶圓廠 P8",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "寶山2奈米晶圓廠 P8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            614,
+            225.29,
+            132,
+            36.43
+          ],
+          "text": "施工中",
+          "textPreview": "施工中",
+          "fillColor": "#DDF4EA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "施工中",
+              "resolvedTextStyle": {
+                "fontSize": 11.51,
+                "typeface": "Microsoft JhengHei",
+                "color": "#17643F",
+                "bold": true
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "施工中",
+                  "fontSize": 11.51,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#17643F",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 4,
+          "column": 5,
+          "bbox": [
+            746,
+            225.29,
+            215,
+            36.43
+          ],
+          "text": "土地15,000坪\n樓地板70,000坪",
+          "textPreview": "土地15,000坪 | 樓地板70,000坪",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "土地15,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "土地15,000坪"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "樓地板70,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "樓地板70,000坪"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 4,
+          "column": 6,
+          "bbox": [
+            961,
+            225.29,
+            265,
+            36.43
+          ],
+          "text": "2奈米主力廠區",
+          "textPreview": "2奈米主力廠區",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "2奈米主力廠區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "2奈米主力廠區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            54,
+            261.71,
+            170,
+            36.43
+          ],
+          "text": "新竹／台南科學園區",
+          "textPreview": "新竹／台南科學園區",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "新竹／台南科學園區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "新竹／台南科學園區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            224,
+            261.71,
+            112,
+            36.43
+          ],
+          "text": "聯電",
+          "textPreview": "聯電",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "聯電",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "聯電"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            336,
+            261.71,
+            278,
+            36.43
+          ],
+          "text": "新竹晶圓廠群、台南12吋廠",
+          "textPreview": "新竹晶圓廠群、台南12吋廠",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "新竹晶圓廠群、台南12吋廠",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "新竹晶圓廠群、台南12吋廠"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            614,
+            261.71,
+            132,
+            36.43
+          ],
+          "text": "營運／擴建",
+          "textPreview": "營運／擴建",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "營運／擴建",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "營運／擴建"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "row": 5,
+          "column": 5,
+          "bbox": [
+            746,
+            261.71,
+            215,
+            36.43
+          ],
+          "text": "待查",
+          "textPreview": "待查",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "待查",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "待查"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "row": 5,
+          "column": 6,
+          "bbox": [
+            961,
+            261.71,
+            265,
+            36.43
+          ],
+          "text": "待拆分具名建案",
+          "textPreview": "待拆分具名建案",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "待拆分具名建案",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "待拆分具名建案"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            54,
+            298.14,
+            170,
+            36.43
+          ],
+          "text": "中科二期",
+          "textPreview": "中科二期",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "中科二期",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "中科二期"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            224,
+            298.14,
+            112,
+            36.43
+          ],
+          "text": "台積電",
+          "textPreview": "台積電",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台積電",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台積電"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 33,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            336,
+            298.14,
+            278,
+            36.43
+          ],
+          "text": "台中1.4奈米晶圓廠",
+          "textPreview": "台中1.4奈米晶圓廠",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台中1.4奈米晶圓廠",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台中1.4奈米晶圓廠"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 34,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            614,
+            298.14,
+            132,
+            36.43
+          ],
+          "text": "已動工",
+          "textPreview": "已動工",
+          "fillColor": "#DDF4EA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "已動工",
+              "resolvedTextStyle": {
+                "fontSize": 11.51,
+                "typeface": "Microsoft JhengHei",
+                "color": "#17643F",
+                "bold": true
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "已動工",
+                  "fontSize": 11.51,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#17643F",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "row": 6,
+          "column": 5,
+          "bbox": [
+            746,
+            298.14,
+            215,
+            36.43
+          ],
+          "text": "土地27,000坪\n樓地板80,000坪",
+          "textPreview": "土地27,000坪 | 樓地板80,000坪",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "土地27,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "土地27,000坪"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "樓地板80,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "樓地板80,000坪"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 36,
+          "row": 6,
+          "column": 6,
+          "bbox": [
+            961,
+            298.14,
+            265,
+            36.43
+          ],
+          "text": "已取得第一期建照",
+          "textPreview": "已取得第一期建照",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "已取得第一期建照",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "已取得第一期建照"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 37,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            54,
+            334.57,
+            170,
+            36.43
+          ],
+          "text": "中部科學園區",
+          "textPreview": "中部科學園區",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "中部科學園區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "中部科學園區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 38,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            224,
+            334.57,
+            112,
+            36.43
+          ],
+          "text": "美光",
+          "textPreview": "美光",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "美光",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "美光"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 39,
+          "row": 7,
+          "column": 3,
+          "bbox": [
+            336,
+            334.57,
+            278,
+            36.43
+          ],
+          "text": "台中A3廠區擴建",
+          "textPreview": "台中A3廠區擴建",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台中A3廠區擴建",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台中A3廠區擴建"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 40,
+          "row": 7,
+          "column": 4,
+          "bbox": [
+            614,
+            334.57,
+            132,
+            36.43
+          ],
+          "text": "施工中",
+          "textPreview": "施工中",
+          "fillColor": "#DDF4EA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "施工中",
+              "resolvedTextStyle": {
+                "fontSize": 11.51,
+                "typeface": "Microsoft JhengHei",
+                "color": "#17643F",
+                "bold": true
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "施工中",
+                  "fontSize": 11.51,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#17643F",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 41,
+          "row": 7,
+          "column": 5,
+          "bbox": [
+            746,
+            334.57,
+            215,
+            36.43
+          ],
+          "text": "待查",
+          "textPreview": "待查",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "待查",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "待查"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 42,
+          "row": 7,
+          "column": 6,
+          "bbox": [
+            961,
+            334.57,
+            265,
+            36.43
+          ],
+          "text": "記憶體擴產",
+          "textPreview": "記憶體擴產",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "記憶體擴產",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "記憶體擴產"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 43,
+          "row": 8,
+          "column": 1,
+          "bbox": [
+            54,
+            371,
+            170,
+            36.43
+          ],
+          "text": "銅鑼科學園區",
+          "textPreview": "銅鑼科學園區",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "銅鑼科學園區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "銅鑼科學園區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 44,
+          "row": 8,
+          "column": 2,
+          "bbox": [
+            224,
+            371,
+            112,
+            36.43
+          ],
+          "text": "美光",
+          "textPreview": "美光",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "美光",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "美光"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 45,
+          "row": 8,
+          "column": 3,
+          "bbox": [
+            336,
+            371,
+            278,
+            36.43
+          ],
+          "text": "美光銅鑼廠",
+          "textPreview": "美光銅鑼廠",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "美光銅鑼廠",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "美光銅鑼廠"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 46,
+          "row": 8,
+          "column": 4,
+          "bbox": [
+            614,
+            371,
+            132,
+            36.43
+          ],
+          "text": "改造中",
+          "textPreview": "改造中",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "改造中",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "改造中"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 47,
+          "row": 8,
+          "column": 5,
+          "bbox": [
+            746,
+            371,
+            215,
+            36.43
+          ],
+          "text": "樓地板60,000坪",
+          "textPreview": "樓地板60,000坪",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "樓地板60,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "樓地板60,000坪"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 48,
+          "row": 8,
+          "column": 6,
+          "bbox": [
+            961,
+            371,
+            265,
+            36.43
+          ],
+          "text": "原力積電廠區",
+          "textPreview": "原力積電廠區",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "原力積電廠區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "原力積電廠區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 49,
+          "row": 9,
+          "column": 1,
+          "bbox": [
+            54,
+            407.43,
+            170,
+            36.43
+          ],
+          "text": "台中工業區",
+          "textPreview": "台中工業區",
+          "fillColor": "#DFF4F7",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台中工業區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台中工業區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 50,
+          "row": 9,
+          "column": 2,
+          "bbox": [
+            224,
+            407.43,
+            112,
+            36.43
+          ],
+          "text": "大立光",
+          "textPreview": "大立光",
+          "fillColor": "#DFF4F7",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "大立光",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "大立光"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 51,
+          "row": 9,
+          "column": 3,
+          "bbox": [
+            336,
+            407.43,
+            278,
+            36.43
+          ],
+          "text": "光通訊／CPO產能基地",
+          "textPreview": "光通訊／CPO產能基地",
+          "fillColor": "#DFF4F7",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "光通訊／CPO產能基地",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "光通訊／CPO產能基地"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 52,
+          "row": 9,
+          "column": 4,
+          "bbox": [
+            614,
+            407.43,
+            132,
+            36.43
+          ],
+          "text": "土地取得",
+          "textPreview": "土地取得",
+          "fillColor": "#DFF4F7",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "土地取得",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "土地取得"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 53,
+          "row": 9,
+          "column": 5,
+          "bbox": [
+            746,
+            407.43,
+            215,
+            36.43
+          ],
+          "text": "土地13,500坪\n建物13,000坪",
+          "textPreview": "土地13,500坪 | 建物13,000坪",
+          "fillColor": "#DFF4F7",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "土地13,500坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "土地13,500坪"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "建物13,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "建物13,000坪"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 54,
+          "row": 9,
+          "column": 6,
+          "bbox": [
+            961,
+            407.43,
+            265,
+            36.43
+          ],
+          "text": "後續動工待追蹤",
+          "textPreview": "後續動工待追蹤",
+          "fillColor": "#DFF4F7",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "後續動工待追蹤",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "後續動工待追蹤"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 55,
+          "row": 10,
+          "column": 1,
+          "bbox": [
+            54,
+            443.86,
+            170,
+            36.43
+          ],
+          "text": "嘉義科學園區",
+          "textPreview": "嘉義科學園區",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "嘉義科學園區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "嘉義科學園區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 56,
+          "row": 10,
+          "column": 2,
+          "bbox": [
+            224,
+            443.86,
+            112,
+            36.43
+          ],
+          "text": "台積電",
+          "textPreview": "台積電",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台積電",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台積電"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 57,
+          "row": 10,
+          "column": 3,
+          "bbox": [
+            336,
+            443.86,
+            278,
+            36.43
+          ],
+          "text": "AP6／AP7先進封裝廠",
+          "textPreview": "AP6／AP7先進封裝廠",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "AP6／AP7先進封裝廠",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "AP6／AP7先進封裝廠"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 58,
+          "row": 10,
+          "column": 4,
+          "bbox": [
+            614,
+            443.86,
+            132,
+            36.43
+          ],
+          "text": "施工中",
+          "textPreview": "施工中",
+          "fillColor": "#DDF4EA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "施工中",
+              "resolvedTextStyle": {
+                "fontSize": 11.51,
+                "typeface": "Microsoft JhengHei",
+                "color": "#17643F",
+                "bold": true
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "施工中",
+                  "fontSize": 11.51,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#17643F",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 59,
+          "row": 10,
+          "column": 5,
+          "bbox": [
+            746,
+            443.86,
+            215,
+            36.43
+          ],
+          "text": "土地12,000坪\n樓地板60,000坪",
+          "textPreview": "土地12,000坪 | 樓地板60,000坪",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "土地12,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "土地12,000坪"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "樓地板60,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "樓地板60,000坪"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 60,
+          "row": 10,
+          "column": 6,
+          "bbox": [
+            961,
+            443.86,
+            265,
+            36.43
+          ],
+          "text": "CoWoS／SoIC",
+          "textPreview": "CoWoS／SoIC",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "CoWoS／SoIC",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "CoWoS／SoIC"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 61,
+          "row": 11,
+          "column": 1,
+          "bbox": [
+            54,
+            480.29,
+            170,
+            36.43
+          ],
+          "text": "台南科學園區",
+          "textPreview": "台南科學園區",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台南科學園區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台南科學園區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 62,
+          "row": 11,
+          "column": 2,
+          "bbox": [
+            224,
+            480.29,
+            112,
+            36.43
+          ],
+          "text": "台積電／日月光",
+          "textPreview": "台積電／日月光",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台積電／日月光",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台積電／日月光"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 63,
+          "row": 11,
+          "column": 3,
+          "bbox": [
+            336,
+            480.29,
+            278,
+            36.43
+          ],
+          "text": "製程與封裝擴建／南科封裝基地",
+          "textPreview": "製程與封裝擴建／南科封裝基地",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "製程與封裝擴建／南科封裝基地",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "製程與封裝擴建／南科封裝基地"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 64,
+          "row": 11,
+          "column": 4,
+          "bbox": [
+            614,
+            480.29,
+            132,
+            36.43
+          ],
+          "text": "施工／已動工",
+          "textPreview": "施工／已動工",
+          "fillColor": "#DDF4EA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "施工／已動工",
+              "resolvedTextStyle": {
+                "fontSize": 11.51,
+                "typeface": "Microsoft JhengHei",
+                "color": "#17643F",
+                "bold": true
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "施工／已動工",
+                  "fontSize": 11.51,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#17643F",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 65,
+          "row": 11,
+          "column": 5,
+          "bbox": [
+            746,
+            480.29,
+            215,
+            36.43
+          ],
+          "text": "台積電樓地板80,000坪\n日月光35,000坪",
+          "textPreview": "台積電樓地板80,000坪 | 日月光35,000坪",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台積電樓地板80,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台積電樓地板80,000坪"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "日月光35,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "日月光35,000坪"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 66,
+          "row": 11,
+          "column": 6,
+          "bbox": [
+            961,
+            480.29,
+            265,
+            36.43
+          ],
+          "text": "供應鏈同步擴建",
+          "textPreview": "供應鏈同步擴建",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "供應鏈同步擴建",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "供應鏈同步擴建"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 67,
+          "row": 12,
+          "column": 1,
+          "bbox": [
+            54,
+            516.71,
+            170,
+            36.43
+          ],
+          "text": "楠梓產業園區",
+          "textPreview": "楠梓產業園區",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "楠梓產業園區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "楠梓產業園區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 68,
+          "row": 12,
+          "column": 2,
+          "bbox": [
+            224,
+            516.71,
+            112,
+            36.43
+          ],
+          "text": "台積電",
+          "textPreview": "台積電",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台積電",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台積電"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 69,
+          "row": 12,
+          "column": 3,
+          "bbox": [
+            336,
+            516.71,
+            278,
+            36.43
+          ],
+          "text": "高雄2奈米廠 P1至P3",
+          "textPreview": "高雄2奈米廠 P1至P3",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "高雄2奈米廠 P1至P3",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "高雄2奈米廠 P1至P3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 70,
+          "row": 12,
+          "column": 4,
+          "bbox": [
+            614,
+            516.71,
+            132,
+            36.43
+          ],
+          "text": "施工中",
+          "textPreview": "施工中",
+          "fillColor": "#DDF4EA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "施工中",
+              "resolvedTextStyle": {
+                "fontSize": 11.51,
+                "typeface": "Microsoft JhengHei",
+                "color": "#17643F",
+                "bold": true
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "施工中",
+                  "fontSize": 11.51,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#17643F",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 71,
+          "row": 12,
+          "column": 5,
+          "bbox": [
+            746,
+            516.71,
+            215,
+            36.43
+          ],
+          "text": "土地36,000坪\n樓地板100,000坪",
+          "textPreview": "土地36,000坪 | 樓地板100,000坪",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "土地36,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "土地36,000坪"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "樓地板100,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "樓地板100,000坪"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 72,
+          "row": 12,
+          "column": 6,
+          "bbox": [
+            961,
+            516.71,
+            265,
+            36.43
+          ],
+          "text": "三期建設",
+          "textPreview": "三期建設",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "三期建設",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "三期建設"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 73,
+          "row": 13,
+          "column": 1,
+          "bbox": [
+            54,
+            553.14,
+            170,
+            36.43
+          ],
+          "text": "橋頭科學園區",
+          "textPreview": "橋頭科學園區",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "橋頭科學園區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "橋頭科學園區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 74,
+          "row": 13,
+          "column": 2,
+          "bbox": [
+            224,
+            553.14,
+            112,
+            36.43
+          ],
+          "text": "台積電",
+          "textPreview": "台積電",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "台積電",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "台積電"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 75,
+          "row": 13,
+          "column": 3,
+          "bbox": [
+            336,
+            553.14,
+            278,
+            36.43
+          ],
+          "text": "橋頭先進製程廠區",
+          "textPreview": "橋頭先進製程廠區",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "橋頭先進製程廠區",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "橋頭先進製程廠區"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 76,
+          "row": 13,
+          "column": 4,
+          "bbox": [
+            614,
+            553.14,
+            132,
+            36.43
+          ],
+          "text": "規劃中",
+          "textPreview": "規劃中",
+          "fillColor": "#FFF1D6",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "規劃中",
+              "resolvedTextStyle": {
+                "fontSize": 11.51,
+                "typeface": "Microsoft JhengHei",
+                "color": "#875B00",
+                "bold": true
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "規劃中",
+                  "fontSize": 11.51,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#875B00",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 77,
+          "row": 13,
+          "column": 5,
+          "bbox": [
+            746,
+            553.14,
+            215,
+            36.43
+          ],
+          "text": "土地約15,000坪",
+          "textPreview": "土地約15,000坪",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "土地約15,000坪",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "土地約15,000坪"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 78,
+          "row": 13,
+          "column": 6,
+          "bbox": [
+            961,
+            553.14,
+            265,
+            36.43
+          ],
+          "text": "待官方確認",
+          "textPreview": "待官方確認",
+          "fillColor": "#E8F0F4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "待官方確認",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "待官方確認"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 79,
+          "row": 14,
+          "column": 1,
+          "bbox": [
+            54,
+            589.57,
+            170,
+            36.43
+          ],
+          "text": "高雄科技聚落",
+          "textPreview": "高雄科技聚落",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "高雄科技聚落",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "高雄科技聚落"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 80,
+          "row": 14,
+          "column": 2,
+          "bbox": [
+            224,
+            589.57,
+            112,
+            36.43
+          ],
+          "text": "鴻海",
+          "textPreview": "鴻海",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "鴻海",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "鴻海"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 81,
+          "row": 14,
+          "column": 3,
+          "bbox": [
+            336,
+            589.57,
+            278,
+            36.43
+          ],
+          "text": "高雄AI資料中心",
+          "textPreview": "高雄AI資料中心",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "高雄AI資料中心",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "高雄AI資料中心"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 82,
+          "row": 14,
+          "column": 4,
+          "bbox": [
+            614,
+            589.57,
+            132,
+            36.43
+          ],
+          "text": "已動工",
+          "textPreview": "已動工",
+          "fillColor": "#DDF4EA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "已動工",
+              "resolvedTextStyle": {
+                "fontSize": 11.51,
+                "typeface": "Microsoft JhengHei",
+                "color": "#17643F",
+                "bold": true
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "已動工",
+                  "fontSize": 11.51,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#17643F",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 83,
+          "row": 14,
+          "column": 5,
+          "bbox": [
+            746,
+            589.57,
+            215,
+            36.43
+          ],
+          "text": "待查",
+          "textPreview": "待查",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "待查",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "待查"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 84,
+          "row": 14,
+          "column": 6,
+          "bbox": [
+            961,
+            589.57,
+            265,
+            36.43
+          ],
+          "text": "AI基礎設施",
+          "textPreview": "AI基礎設施",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "AI基礎設施",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "AI基礎設施"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vm9gvit0",
+      "id": "4",
+      "bbox": [
+        55,
+        650,
+        1170,
+        25
+      ],
+      "geometry": "rect",
+      "text": "資料截至2026年9月7日；未公開坪數保留待查；規劃案以官方公告為準",
+      "textPreview": "資料截至2026年9月7日；未公開坪數保留待查；規劃案以官方公告為準",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 12,
+        "typeface": "Microsoft JhengHei",
+        "color": "#607B8A",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "資料截至2026年9月7日；未公開坪數保留待查；規劃案以官方公告為準"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "資料截至2026年9月7日；未公開坪數保留待查；規劃案以官方公告為準",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Microsoft JhengHei",
+            "color": "#607B8A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "資料截至2026年9月7日；未公開坪數保留待查；規劃案以官方公告為準",
+              "fontSize": 12,
+              "typeface": "Microsoft JhengHei",
+              "color": "#607B8A"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

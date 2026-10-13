@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>台灣科技廠房地圖</title>
+  <script src="../data/taiwan_counties.js"></script>
+  <style>
+    *{box-sizing:border-box} html,body{margin:0;width:1600px;height:900px;overflow:hidden;background:#f7fafc;color:#163246;font-family:"Microsoft JhengHei",sans-serif}
+    .slide{position:relative;width:1600px;height:900px;padding:54px 70px 42px;background:linear-gradient(135deg,#ffffff 0%,#f3f8fb 58%,#eaf4f6 100%)}
+    h1{margin:0;font-size:44px;line-height:1.1;letter-spacing:.5px;color:#12384f}
+    .sub{margin-top:10px;font-size:20px;color:#587486}
+    .rule{position:absolute;left:70px;right:70px;top:138px;height:2px;background:#cfe1e8}
+    .grid{position:absolute;left:70px;right:70px;top:164px;bottom:92px;display:grid;grid-template-columns:390px 1fr 390px;gap:30px;align-items:stretch}
+    .list{display:flex;flex-direction:column;justify-content:space-between;padding:5px 0 10px}
+    .item{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start}
+    .num{width:34px;height:34px;border-radius:50%;background:#0e8798;color:white;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px #94aeb933}
+    .item.plan .num{background:#e6a23c}.name{font-size:19px;font-weight:700;color:#163f55;line-height:1.3}.loc{font-size:15px;color:#66808e;margin-top:3px}.case{font-size:16px;color:#294d60;margin-top:3px;line-height:1.3}
+    .mapwrap{position:relative;display:flex;align-items:center;justify-content:center}
+    svg{width:100%;height:100%;overflow:visible}
+    .county{fill:#dbecef;stroke:#ffffff;stroke-width:1.4;vector-effect:non-scaling-stroke}.coast{fill:none;stroke:#80aeb8;stroke-width:2;vector-effect:non-scaling-stroke}
+    .marker circle{fill:#0e8798;stroke:#fff;stroke-width:3}.marker.plan circle{fill:#e6a23c}.marker text{fill:#fff;font-size:14px;font-weight:700;text-anchor:middle;dominant-baseline:central}
+    .footer{position:absolute;left:70px;right:70px;bottom:35px;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:#66808e}
+    .legend{display:flex;gap:24px}.legend span:before{content:"";display:inline-block;width:11px;height:11px;border-radius:50%;background:#0e8798;margin-right:7px}.legend .p:before{background:#e6a23c}
+  </style>
+</head>
+<body>
+  <section class="slide">
+    <h1>台灣主要科學園區與科技廠房</h1>
+    <div class="sub">依專案資料中的縣市、行政區與經緯度定位</div>
+    <div class="rule"></div>
+    <div class="grid">
+      <div class="list" id="left"></div>
+      <div class="mapwrap"><svg id="map" viewBox="0 0 620 650" aria-label="台灣縣市界與科技園區位置"></svg></div>
+      <div class="list" id="right"></div>
+    </div>
+    <div class="footer">
+      <div class="legend"><span>施工、已動工或土地取得</span><span class="p">規劃中或待官方確認</span></div>
+      <div>位置為園區／建案定位，資料截至 2026 年 9 月 7 日</div>
+    </div>
+  </section>
+  <script>
+    const sites = [
+      {n:1, side:'left', name:'北投士林科技園區', loc:'台北市北投區', detail:'NVIDIA AI研發中心', lat:25.11,lng:121.51,plan:true},
+      {n:2, side:'left', name:'龍潭科學園區', loc:'桃園市龍潭區', detail:'台積電龍潭新廠區，待官方確認', lat:24.867,lng:121.196,plan:true},
+      {n:3, side:'left', name:'竹科寶山二期', loc:'新竹縣寶山鄉', detail:'台積電 P8 2奈米廠', lat:24.725,lng:120.995},
+      {n:4, side:'left', name:'銅鑼科學園區', loc:'苗栗縣銅鑼鄉', detail:'美光銅鑼廠', lat:24.46,lng:120.79},
+      {n:5, side:'left', name:'中科后里園區', loc:'台中市后里區', detail:'美光 A3 廠區擴建', lat:24.31,lng:120.72},
+      {n:6, side:'left', name:'中科二期', loc:'台中市大雅區', detail:'台積電 1.4奈米廠', lat:24.228,lng:120.605},
+      {n:7, side:'right', name:'台中工業區', loc:'台中市西屯／南屯區', detail:'大立光光通訊、CPO基地', lat:24.15,lng:120.63},
+      {n:8, side:'right', name:'嘉義科學園區', loc:'嘉義縣太保市', detail:'台積電 AP6／AP7', lat:23.495,lng:120.326},
+      {n:9, side:'right', name:'台南科學園區', loc:'台南市新市區', detail:'台積電與日月光擴建', lat:23.107,lng:120.282},
+      {n:10,side:'right', name:'楠梓產業園區', loc:'高雄市楠梓區', detail:'台積電高雄 P1 至 P3', lat:22.724,lng:120.318},
+      {n:11,side:'right', name:'橋頭科學園區', loc:'高雄市橋頭區', detail:'台積電先進製程廠區，規劃中', lat:22.75,lng:120.313,plan:true},
+      {n:12,side:'right', name:'屏東科技園區', loc:'屏東縣長治鄉', detail:'半導體材料與設備供應鏈', lat:22.70,lng:120.54,plan:true}
+    ];
+    const svg=document.getElementById('map');
+    const NS='http://www.w3.org/2000/svg';
+    const minLng=119.90,maxLng=122.05,minLat=21.85,maxLat=25.35;
+    const scale=Math.min(530/(maxLng-minLng),620/(maxLat-minLat));
+    const ox=(620-(maxLng-minLng)*scale)/2, oy=(650-(maxLat-minLat)*scale)/2;
+    const project=([lng,lat])=>[ox+(lng-minLng)*scale,oy+(maxLat-lat)*scale];
+    function ringsToPath(rings){return rings.map(r=>r.map((p,i)=>{const [x,y]=project(p);return `${i?'L':'M'}${x.toFixed(1)},${y.toFixed(1)}`}).join(' ')+' Z').join(' ')}
+    TW_COUNTIES.features.forEach(f=>{
+      const g=f.geometry; const paths=g.type==='Polygon'?[g.coordinates]:g.coordinates;
+      paths.forEach(poly=>{const p=document.createElementNS(NS,'path');p.setAttribute('d',ringsToPath(poly));p.setAttribute('class','county');svg.appendChild(p)});
+    });
+    sites.forEach(s=>{
+      const [x,y]=project([s.lng,s.lat]);const g=document.createElementNS(NS,'g');g.setAttribute('class','marker'+(s.plan?' plan':''));g.setAttribute('transform',`translate(${x},${y})`);
+      const c=document.createElementNS(NS,'circle');c.setAttribute('r','14');g.appendChild(c);
+      const t=document.createElementNS(NS,'text');t.textContent=s.n;t.setAttribute('y','1');g.appendChild(t);svg.appendChild(g);
+    });
+    for(const side of ['left','right']){
+      const root=document.getElementById(side);
+      sites.filter(s=>s.side===side).forEach(s=>{const d=document.createElement('div');d.className='item'+(s.plan?' plan':'');d.innerHTML=`<div class="num">${s.n}</div><div><div class="name">${s.name}</div><div class="loc">${s.loc}</div><div class="case">${s.detail}</div></div>`;root.appendChild(d)});
+    }
+  </script>
+</body>
+</html>

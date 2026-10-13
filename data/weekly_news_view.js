@@ -1,0 +1,55 @@
+(function () {
+  'use strict';
+  const news = window.TECH_NEWS;
+  if (!news || !Array.isArray(news.events)) return;
+  const style = document.createElement('style');
+  style.textContent = '.tech-news{margin:12px 24px;padding:12px 16px;background:#eef4f8;color:#17324b;border:1px solid #bacbd8;border-radius:8px;font:14px/1.65 "Microsoft JhengHei",sans-serif}.tech-news summary{cursor:pointer;font-weight:700}.tech-news .news-period{font-size:12px;color:#526679;margin-top:4px}.tech-news article{padding:14px 0;border-top:1px solid #c9d6e0}.tech-news h3{font-size:16px;margin:0 0 5px}.tech-news p{margin:5px 0}.tech-news .news-status{display:inline-block;margin:0 0 6px;padding:2px 8px;background:#dae7ef;border-radius:5px;font-size:12px}.tech-news .news-pending{background:#fff0d5;color:#734800}.tech-news a{color:#075a85;text-decoration:underline}.tech-news ul{padding-left:22px;margin:8px 0}.tech-news .source-meta{font-size:12px;color:#526679}.tech-news .news-gaps{background:#fff5e7;padding:12px;border-radius:5px;margin-top:12px}.tech-news .news-gaps h3{font-size:14px}@media(max-width:600px){.tech-news{margin:10px 12px;padding:10px}}';
+  document.head.appendChild(style);
+  const el = (tag, text, className) => {
+    const n = document.createElement(tag);
+    if (text !== undefined) n.textContent = text;
+    if (className) n.className = className;
+    return n;
+  };
+  const root = el('section', undefined, 'tech-news');
+  root.setAttribute('aria-label', '本週科技園區與廠房消息');
+  const details = el('details');
+  details.appendChild(el('summary', '本週查核：' + news.events.length + ' 則事件｜含待確認消息與覆蓋缺口'));
+  const period = el('p', '查核區間：' + news.meta.window_start + ' ～ ' + news.meta.window_end + '｜主資料更新：' + window.TECH_DB.meta.updated + '｜重點抽查，未完成全量驗收', 'news-period');
+  root.appendChild(period);
+  root.appendChild(details);
+  news.events.forEach(event => {
+    const article = el('article');
+    article.id = event.id;
+    article.appendChild(el('h3', event.title));
+    const pending = /待|傳/.test(event.verification_status);
+    article.appendChild(el('span', event.verification_status + '｜可信度：' + event.confidence, 'news-status' + (pending ? ' news-pending' : '')));
+    article.appendChild(el('p', '對應：' + event.case_name + '｜' + event.park));
+    article.appendChild(el('p', event.summary));
+    article.appendChild(el('p', '處理：' + event.action));
+    const sources = el('ul');
+    event.sources.forEach(source => {
+      const item = el('li');
+      const a = el('a', source.source_name + '｜' + source.title);
+      const url = new URL(source.url);
+      if (!['https:', 'http:'].includes(url.protocol)) return;
+      a.href = url.href;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      item.appendChild(a);
+      item.appendChild(el('div', '發布：' + (source.published_date || '原頁未標示') + '｜查閱：' + source.accessed_date + '｜來源可信度：' + source.confidence, 'source-meta'));
+      if (source.note) item.appendChild(el('div', source.note, 'source-meta'));
+      sources.appendChild(item);
+    });
+    article.appendChild(sources);
+    details.appendChild(article);
+  });
+  const gaps = el('div', undefined, 'news-gaps');
+  gaps.appendChild(el('h3', '仍待查核'));
+  const list = el('ul');
+  news.coverage_gaps.forEach(gap => list.appendChild(el('li', gap)));
+  gaps.appendChild(list);
+  details.appendChild(gaps);
+  const header = document.querySelector('header');
+  if (header) header.insertAdjacentElement('afterend', root);
+})();

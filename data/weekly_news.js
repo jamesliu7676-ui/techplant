@@ -1,0 +1,557 @@
+window.TECH_NEWS = {
+  "meta": {
+    "title": "科技園區與重大科技廠房每週查核",
+    "updated": "2026-10-05",
+    "checked_at": "2026-10-05T10:15:35.483014+08:00",
+    "window_start": "2026-09-07",
+    "window_end": "2026-10-05",
+    "window_basis": "上次9月29日為部分查核，尚無完整成功研究日；本次優先9月29日至10月5日，並追補9月7日起未解缺口。",
+    "coverage_status": "partial",
+    "complete_through": null,
+    "scope_note": "重點來源抽查；不是全量公告驗收。",
+    "candidate_count": 15,
+    "new_event_count": 8,
+    "updated_event_count": 3,
+    "latest_run_start": "2026-09-29",
+    "new_event_ids": [
+      "evt-20261001-nanya-pingtung",
+      "evt-20261001-hansol-ciaotou",
+      "evt-20261001-accton-ai2",
+      "evt-20260930-unimicron-hukou",
+      "evt-20261001-micron-taiwan",
+      "evt-20261001-ctsp-review35",
+      "evt-20261001-sipa-review35",
+      "evt-20261003-yilan-stopwork"
+    ],
+    "updated_event_ids": [
+      "evt-20260924-daxin-ciaotou1",
+      "evt-20260928-chiayi-consultation",
+      "evt-20260927-tsmc-chiayi-rumor"
+    ]
+  },
+  "events": [
+    {
+      "id": "evt-20260917-largan-jingke10",
+      "dedupe_key": "largang|精科東路10號|acquisition|2026-09-17",
+      "title": "大立光取得精科東路10號土地及廠房",
+      "event_date": "2026-09-17",
+      "company_ids": [
+        "largang"
+      ],
+      "project_ids": [
+        "p012"
+      ],
+      "site_ids": [
+        "s040"
+      ],
+      "park": "台中精密機械科技創新園區",
+      "case_name": "南屯區寶文段146-1土地及精科東路10號建物",
+      "confidence": "高（公告轉載）",
+      "verification_status": "公告轉載已核對",
+      "summary": "公告土地約2,259.25坪、建物約3,695.25坪，交易總額11.72億元；用途為未來擴充產能。公告未揭露動工或完工日期，也未明示CPO用途。",
+      "action": "補充既有集合案追蹤註記；本次單筆不加總至原五筆交易面積，避免統計口徑混合。",
+      "sources": [
+        {
+          "title": "大立光 公告本公司取得不動產相關訊息",
+          "source_name": "MoneyDJ（公開資訊觀測站重大訊息轉載）",
+          "url": "https://5850web.moneydj.com/z/zf/zfz/zfz_3A280CD4-3DE6-495C-8D9F-0D8B454174E2.djhtm",
+          "published_date": "2026-09-17",
+          "accessed_date": "2026-09-29",
+          "source_type": "mops_reprint",
+          "confidence": "高（公告轉載）",
+          "note": "已讀取條列全文；本次未直接取得 MOPS 原站公告。"
+        },
+        {
+          "title": "大立光再砸11.72億元購入台中精密機械園區土地廠房",
+          "source_name": "鉅亨網",
+          "url": "https://news.cnyes.com/news/id/6609411",
+          "published_date": "2026-09-17",
+          "accessed_date": "2026-09-29",
+          "source_type": "media",
+          "confidence": "中高",
+          "note": "公告數值與 MoneyDJ 轉載一致；CPO 用途為市場解讀。"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260916-ampower-tainan2",
+      "dedupe_key": "ampower|台南二廠|groundbreaking|2026-09-16",
+      "title": "安葆台南二廠動土",
+      "event_date": "2026-09-16",
+      "company_ids": [
+        "ampower"
+      ],
+      "project_ids": [],
+      "site_ids": [
+        "s052"
+      ],
+      "park": "台南市永康區（園區名稱未揭露）",
+      "case_name": "安葆台南二廠",
+      "confidence": "高",
+      "verification_status": "官方確認",
+      "summary": "官方確認9月16日動土，占地約1,000坪，預計2027年第二季完工；規劃儲能電池櫃、控制系統與工程預製組件的製造及整合。",
+      "action": "新增海選據點；樓地板面積、精確廠址及座標未公開於本次來源，暫不新增地圖工程案。",
+      "sources": [
+        {
+          "title": "安葆台南二廠正式動土：擴建模組化預製產能，深化工程整合實力",
+          "source_name": "安葆電能",
+          "url": "https://www.ampower.com.tw/index.php/2026/09/23/ampower-breaks-ground-on-second-tainan-plant/",
+          "published_date": "2026-09-23",
+          "accessed_date": "2026-09-29",
+          "source_type": "official",
+          "confidence": "高"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260924-daxin-ciaotou1",
+      "dedupe_key": "daxin|橋頭一期|groundbreaking|2026-09-24",
+      "title": "達興材料橋頭一期動土獲官方原稿確認",
+      "event_date": "2026-09-24",
+      "company_ids": [
+        "daxin"
+      ],
+      "company_name": "達興材料",
+      "project_ids": [],
+      "site_ids": [
+        "s053"
+      ],
+      "park": "橋頭科學園區",
+      "case_name": "橋頭一期半導體及關鍵原材料研發生產廠",
+      "confidence": "高",
+      "verification_status": "官方確認",
+      "summary": "高雄市政府9月29日發布原稿，確認9月24日橋頭一期半導體及關鍵原材料研發生產廠動土。",
+      "action": "補上官方原稿並合併上週同事件；新增s053海選據點，未填補未公開面積、投資額或完工日。",
+      "sources": [
+        {
+          "title": "特用材料供應大廠達興材料 高雄橋頭一期新廠動土 強化南部半導體供應鏈",
+          "source_name": "樂聯網",
+          "url": "https://leho.com.tw/archives/389365",
+          "published_date": "2026-09-24",
+          "accessed_date": "2026-09-29",
+          "source_type": "media",
+          "confidence": "中高",
+          "note": "報導引述經發局與公司董事長；公司新聞稿及政府完整新聞原稿尚未取得。"
+        },
+        {
+          "title": "市政行程：115年9月24日達興材料橋頭廠一期開工典禮",
+          "source_name": "高雄市政府",
+          "url": "https://www.kcg.gov.tw/CitySchedule.aspx?n=5075DEA56BE7DE52&sms=CBE053952D27CC97",
+          "published_date": null,
+          "accessed_date": "2026-09-29",
+          "source_type": "official_schedule",
+          "confidence": "高（僅行程）",
+          "note": "行程日期為2026-09-24；頁面未標示該行程發布日，不能把活動日當發布日。列有橋科5路及座標22.772408、120.333791；行程不能單獨證明工程已開工。"
+        },
+        {
+          "title": "特用材料供應大廠達興材料高雄橋頭一期新廠動土 強化南部半導體供應鏈",
+          "source_name": "高雄市政府經濟發展局",
+          "url": "https://www.kcg.gov.tw/News_Content.aspx?n=F29A02A9D36C47F0&sms=19902EF36D6B551D&s=896060FD70C8CA8C",
+          "published_date": "2026-09-29",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高",
+          "note": "頁面發布日為9月29日；內文記載24日動土，事件日與發布日分開。未載本期面積、金額及完工日。"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "evt-20260921-baipu",
+      "dedupe_key": "park|白埔產業園區|groundbreaking|2026-09-21",
+      "title": "白埔產業園區動土",
+      "event_date": "2026-09-21",
+      "company_ids": [],
+      "project_ids": [],
+      "site_ids": [],
+      "park": "白埔產業園區",
+      "case_name": "白埔產業園區開發",
+      "confidence": "高",
+      "verification_status": "官方確認",
+      "summary": "總統府確認9月21日動土，園區占地近89公頃，定位為半導體先進設備材料驗測基地，串聯南部供應鏈。",
+      "action": "保留園區層級消息；園區動土不代表所有進駐公司的個別廠房同步動工。",
+      "sources": [
+        {
+          "title": "總統出席白埔產業園區動土典禮 完善南部半導體生態系 盼共同努力確保未來百年競爭優勢",
+          "source_name": "中華民國總統府",
+          "url": "https://www.president.gov.tw/News/40363",
+          "published_date": "2026-09-21",
+          "accessed_date": "2026-09-29",
+          "source_type": "official",
+          "confidence": "高"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260928-minxiong",
+      "dedupe_key": "ncsist|民雄東西基地|ceremony|2026-09-28",
+      "title": "民雄西側產業園區動土、東側院區啟用",
+      "event_date": "2026-09-28",
+      "company_ids": [],
+      "company_name": "國家中山科學研究院",
+      "project_ids": [],
+      "site_ids": [],
+      "park": "民雄航太暨無人機產業園區／民雄院區",
+      "case_name": "西側園區開發與東側研發院區（兩者分開解讀）",
+      "confidence": "高",
+      "verification_status": "官方確認",
+      "summary": "9月28日同場典禮：西側產業園區動土，中央投入近69億元、預計2028年完工；東側民雄院區投入超過11億元，當日啟用。",
+      "action": "保留兩個基地的不同階段與投資口徑，不把東側啟用套用到西側園區。",
+      "sources": [
+        {
+          "title": "中科院民雄產業園區動土及民雄院區啟用 總統盼推動臺灣成為「無人機民主供應鏈的亞洲中心」",
+          "source_name": "中華民國總統府",
+          "url": "https://www.president.gov.tw/News/40382",
+          "published_date": "2026-09-28",
+          "accessed_date": "2026-09-29",
+          "source_type": "official",
+          "confidence": "高"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260928-chiayi-consultation",
+      "dedupe_key": "park|嘉義二期擴大|consultation|2026-09",
+      "title": "嘉義園區二期擴大計畫徵求意見",
+      "event_date": "2026-09-24",
+      "company_ids": [],
+      "project_ids": [],
+      "related_project_ids": [
+        "p004"
+      ],
+      "site_ids": [],
+      "related_site_ids": [
+        "s005"
+      ],
+      "park": "嘉義科學園區",
+      "case_name": "嘉義園區擴建計畫（二期擴大）",
+      "confidence": "高（政策程序）",
+      "verification_status": "官方原始公告已取得",
+      "summary": "南科管理局原始頁及清單均標示2026-09-24發布，依園區新設及擴建作業須知公開資訊、徵求民眾意見。",
+      "action": "以原始公告9月24日釐清先前23／27日轉述差異；附件範圍尚待核對，不修改p004、s005的面積與時程，也不推認台積電新廠數。",
+      "sources": [
+        {
+          "title": "中科院民雄產業園區動土及民雄院區啟用 總統盼推動臺灣成為「無人機民主供應鏈的亞洲中心」",
+          "source_name": "中華民國總統府",
+          "url": "https://www.president.gov.tw/News/40382",
+          "published_date": "2026-09-28",
+          "accessed_date": "2026-09-29",
+          "source_type": "official",
+          "confidence": "高"
+        },
+        {
+          "title": "本局辦理嘉義園區擴建計畫(二期擴大)之資訊，歡迎踴躍提供意見",
+          "source_name": "南部科學園區管理局",
+          "url": "https://www.stsp.gov.tw/guide/public_info/report/rt_detail.jsp?rep_rfnbr=13138&sc=R",
+          "published_date": "2026-09-24",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高",
+          "note": "清單與詳情均顯示9月24日；僅確認徵詢程序，未據此認定台積電新增廠數。附件PDF本次未完整解析。"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "evt-20260927-tsmc-chiayi-rumor",
+      "dedupe_key": "tsmc|嘉義二期擴大|five-fabs-rumor|2026-09-27",
+      "title": "傳台積電嘉義再增5座先進封裝廠",
+      "event_date": null,
+      "company_ids": [
+        "tsmc"
+      ],
+      "project_ids": [],
+      "related_project_ids": [
+        "p004"
+      ],
+      "site_ids": [],
+      "related_site_ids": [
+        "s005"
+      ],
+      "park": "嘉義科學園區",
+      "case_name": "尚未經官方證實的新增5座廠房構想",
+      "confidence": "低",
+      "verification_status": "傳／待官方確認",
+      "summary": "媒體以供應鏈消息報導可能再增5座廠；官方園區擴建程序不等同公司投資確認。",
+      "action": "維持傳／待官方確認，不增加案件或累計廠數。南科原始徵詢公告日期本次已確認為9月24日，但不能證明新增5廠；媒體2027年量產與p004原欄位之廠號及時程仍待核對。",
+      "sources": [
+        {
+          "title": "嘉科三期起跑 傳台積電再加碼5座先進封裝廠",
+          "source_name": "大紀元",
+          "url": "https://www.epochtimes.com/b5/26/9/27/n14858411.htm",
+          "published_date": "2026-09-27",
+          "accessed_date": "2026-09-29",
+          "source_type": "media",
+          "confidence": "低（傳聞）",
+          "note": "內文明示供應鏈消息；與總統府對公告日期的描述不同，待南科／國科會原始公告釐清。"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "evt-20261001-nanya-pingtung",
+      "dedupe_key": "nanya_memory|屏東分公司|approval|2026-10-01",
+      "title": "南亞科技屏東3D封裝測試投資案核准",
+      "event_date": "2026-10-01",
+      "company_ids": [
+        "nanya_memory"
+      ],
+      "company_name": "南亞科技",
+      "project_ids": [],
+      "site_ids": [
+        "s054"
+      ],
+      "park": "屏東科學園區",
+      "case_name": "屏東分公司先進半導體3D晶圓封裝及測試",
+      "confidence": "高",
+      "verification_status": "官方確認",
+      "summary": "南科管理局確認10月1日核准入區投資，業務為3D晶圓封裝及測試與記憶體模組。",
+      "action": "新增s054規劃據點；未公告面積、投資額及建廠時程，均不推估。",
+      "sources": [
+        {
+          "title": "國家科學及技術委員會科學園區審議會第35次會議核准投資案",
+          "source_name": "南部科學園區管理局",
+          "url": "https://www.stsp.gov.tw/guide/public_info/press/ps_detail.jsp?rep_rfnbr=13143&sc=R",
+          "published_date": "2026-10-01",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高",
+          "note": "核准投資不等於取得土地、動工或投產；南亞科未揭露金額與面積，台灣韓松投資額8億元。"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "evt-20261001-hansol-ciaotou",
+      "dedupe_key": "taiwan_hansol|橋頭|approval|2026-10-01",
+      "title": "台灣韓松橋頭半導體材料投資案核准",
+      "event_date": "2026-10-01",
+      "company_ids": [
+        "taiwan_hansol"
+      ],
+      "company_name": "台灣韓松電子材料",
+      "project_ids": [],
+      "site_ids": [
+        "s055"
+      ],
+      "park": "橋頭科學園區",
+      "case_name": "韓商韓松化學在台電子材料投資",
+      "confidence": "高",
+      "verification_status": "官方確認",
+      "summary": "南科管理局核准韓商韓松化學於橋頭設立台灣韓松電子材料，投資8億元，從事半導體關鍵化學材料研發與製造。",
+      "action": "新增s055規劃據點；核准入園不等於動工，不填面積及工程時程。",
+      "sources": [
+        {
+          "title": "國家科學及技術委員會科學園區審議會第35次會議核准投資案",
+          "source_name": "南部科學園區管理局",
+          "url": "https://www.stsp.gov.tw/guide/public_info/press/ps_detail.jsp?rep_rfnbr=13143&sc=R",
+          "published_date": "2026-10-01",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高",
+          "note": "核准投資不等於取得土地、動工或投產；南亞科未揭露金額與面積，台灣韓松投資額8億元。"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "evt-20261001-accton-ai2",
+      "dedupe_key": "accton|新竹縣AI產二|groundbreaking|2026-10-01",
+      "title": "智邦AI智慧園區產二支援大樓動土",
+      "event_date": "2026-10-01",
+      "company_ids": [],
+      "company_name": "智邦科技",
+      "project_ids": [],
+      "site_ids": [],
+      "park": "新竹縣AI智慧園區",
+      "case_name": "產業專用區（二）新建大樓",
+      "confidence": "高",
+      "verification_status": "官方確認",
+      "summary": "縣府確認10月1日動土，土地2公頃，規劃地上13層、地下3層；包含共享辦公、商業服務、願景館與育成空間。",
+      "action": "列園區配套工程消息；用途並非生產廠房，不新增晶圓廠或一般廠房案，不推估樓地板面積與完工日。",
+      "sources": [
+        {
+          "title": "竹縣AI智慧園區產二工程動土 楊文科期許打造育成場域展現AI創新成果",
+          "source_name": "新竹縣政府",
+          "url": "https://www.hsinchu.gov.tw/News_Content.aspx?n=153&s=356998",
+          "published_date": "2026-10-01",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "evt-20260930-unimicron-hukou",
+      "dedupe_key": "unimicron|普利司通湖口|acquisition|2026-09-30",
+      "title": "欣興湖口購地與重建規劃待公告明細核對",
+      "event_date": "2026-09-30",
+      "company_ids": [
+        "unimicron"
+      ],
+      "company_name": "欣興電子",
+      "project_ids": [],
+      "site_ids": [],
+      "park": "新竹產業園區",
+      "case_name": "向台灣普利司通取得湖口土地及建物",
+      "confidence": "中高",
+      "verification_status": "待官方公告明細確認",
+      "summary": "MOPS列表確認9月30日15:27:35有取得不動產公告。MoneyDJ報導交易100.8888億元、土地約19,072坪及既有建物約17,601坪，規劃拆除重建，2029年完成建物、2030年貢獻產能。",
+      "action": "公告正文未取得，交易數值及時程維持待官方原文確認；不將既有建物面積當成未來新廠面積，也不覆寫s022桃園基地。",
+      "sources": [
+        {
+          "title": "欣興砸百億買新竹廠地 AI載板擴產規劃直達2030年",
+          "source_name": "MoneyDJ",
+          "url": "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=0a867f84-c2c8-450c-8bfb-e14b928ef6e6",
+          "published_date": "2026-10-01",
+          "accessed_date": "2026-10-05",
+          "source_type": "media",
+          "confidence": "中高（待公告明細）",
+          "note": "正文引述公司及重大訊息；本次MOPS只取得公告列表，交易面積、金額與建廠計畫尚待原公告明細核對。"
+        },
+        {
+          "title": "欣興：本公司取得不動產相關訊息",
+          "source_name": "公開資訊觀測站",
+          "url": "https://mops.twse.com.tw/mops/#/web/t05st01",
+          "published_date": "2026-09-30",
+          "accessed_date": "2026-10-05",
+          "source_type": "official_index",
+          "confidence": "高（僅公告存在）",
+          "note": "查詢公司3037、民國115年9月；發言日期115/09/30 15:27:35。已見列表；點選詳細資料未取得內文。此URL需重輸查詢條件。"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "evt-20261001-micron-taiwan",
+      "dedupe_key": "micron|四大基地|company-update|2026-10-01",
+      "title": "美光四大基地擴建與裝機進度待原稿核對",
+      "event_date": "2026-10-01",
+      "company_ids": [
+        "micron"
+      ],
+      "company_name": "美光",
+      "project_ids": [],
+      "site_ids": [],
+      "park": "桃園／銅鑼／台中后里／台南",
+      "case_name": "四大基地擴產談話（各基地分開解讀）",
+      "confidence": "中高",
+      "verification_status": "公司談話轉述／待官方原文確認",
+      "summary": "鉅亨引述美光台灣董事長：桃園Fab 11E於7月30日動土、預計2028年上線；銅鑼P5持續裝機並推動第二廠；后里先進封裝二廠預計10月中啟用；台南改造廠9月初開始進機。",
+      "action": "公司原始稿未取得，保留媒體轉述、待官方原文確認；不更動p010／p011，也不將預計啟用等同已投產、將封裝廠套成A3晶圓廠。",
+      "sources": [
+        {
+          "title": "〈美光加碼台灣〉美光台灣四大基地同步擴產 台中HBM先進封裝二廠本月啟用",
+          "source_name": "鉅亨網",
+          "url": "https://news.cnyes.com/news/id/6619474",
+          "published_date": "2026-10-01",
+          "accessed_date": "2026-10-05",
+          "source_type": "media_company_statement",
+          "confidence": "中高（公司談話轉述）",
+          "note": "記者引述台灣美光董事長10月1日談話；尚未取得公司原始新聞稿，不將預定啟用改成已投產。"
+        }
+      ],
+      "last_checked": "2026-10-05",
+      "related_project_ids": [
+        "p010",
+        "p011"
+      ]
+    },
+    {
+      "id": "evt-20261001-ctsp-review35",
+      "dedupe_key": "park|中科35次審議|approval|2026-10-01",
+      "title": "中科核准京和二林與鈞匠台中投資案",
+      "event_date": "2026-10-01",
+      "company_ids": [],
+      "company_name": "京和科技、鈞匠科技",
+      "project_ids": [],
+      "site_ids": [],
+      "park": "中科二林園區／臺中園區",
+      "case_name": "第35次審議會中科新投資案",
+      "confidence": "高",
+      "verification_status": "官方確認",
+      "summary": "官方核准3案合計12.3億元，其中1案不公開。公開案為京和科技二林特殊氣體投資9.5億元，及鈞匠科技臺中創能建材平台投資0.3億元。",
+      "action": "僅記錄公開核准投資；未公開案不猜公司，未揭露實際廠地與建築工程範圍者不新增地圖工程定位。",
+      "sources": [
+        {
+          "title": "國家科學及技術委員會第35次園區審議會 核准中科投資案",
+          "source_name": "中部科學園區管理局",
+          "url": "https://www.ctsp.gov.tw/chinese/01-News/01-online_view.aspx?v=1&fr=1000&no=1001&sn=16708",
+          "published_date": "2026-10-01",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "evt-20261001-sipa-review35",
+      "dedupe_key": "park|竹科35次審議|approval|2026-10-01",
+      "title": "竹科與宜蘭核准四件新投資案",
+      "event_date": "2026-10-01",
+      "company_ids": [],
+      "company_name": "芯曜半導體、寳碩智匯、豐譽智慧動能、廣運航太",
+      "project_ids": [],
+      "site_ids": [],
+      "park": "新竹科學園區／宜蘭科學園區",
+      "case_name": "第35次審議會竹科新投資案",
+      "confidence": "高",
+      "verification_status": "官方確認",
+      "summary": "10月3日官方公告10月1日核准四案合計8.33525億元。芯曜與寳碩設於新竹；豐譽與廣運設於宜蘭。廣運投資0.88億元並提出分年建廠、設備與研發規劃。",
+      "action": "核准投資與增資45.588億元分開，不混算為建廠金額；相對年度未指定起算日期，不換算動工／完工日期。",
+      "sources": [
+        {
+          "title": "國科會第35次園區審議會核准投資案(竹科)",
+          "source_name": "新竹科學園區管理局",
+          "url": "https://www.sipa.gov.tw/home.jsp?mserno=201001210001&serno=201001210002&menudata=ChineseMenu&contlink=ap/information_1_view.jsp&dataserno=202610030001",
+          "published_date": "2026-10-03",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高",
+          "note": "會議日期10月1日，頁面公告日期10月3日；兩日期分開記錄。"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "evt-20261003-yilan-stopwork",
+      "dedupe_key": "park|宜蘭一期廠辦事故工區|stopwork|2026-10-03",
+      "title": "宜蘭園區一期廠辦事故工區停工",
+      "event_date": "2026-10-03",
+      "company_ids": [],
+      "company_name": "新竹科學園區管理局",
+      "project_ids": [],
+      "site_ids": [],
+      "park": "宜蘭科學園區",
+      "case_name": "一期廠辦大樓外牆清洗事故工區",
+      "confidence": "高",
+      "verification_status": "官方確認",
+      "summary": "竹科管理局10月3日公告已勒令事故工區即刻停工，並進行現場保全及後續調查。",
+      "action": "停工範圍限公告所稱事故工區；不套用為整個宜蘭園區停工，不推估復工或完工延期。",
+      "sources": [
+        {
+          "title": "宜蘭科學園區清洗外牆吊車傾倒案之後續處理說明",
+          "source_name": "新竹科學園區管理局",
+          "url": "https://www.sipa.gov.tw/home.jsp?mserno=201001210001&serno=201001210002&menudata=ChineseMenu&contlink=ap/information_1_view.jsp&dataserno=202610030002",
+          "published_date": "2026-10-03",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    }
+  ],
+  "coverage_gaps": [
+    "本次重點查核三大科學園區管理局及地方政府原稿、MOPS欣興9月列表與媒體候選；未完成全部原有46家公司與所有案件之公司公告／MOPS逐家期間核對。未命中不等於無變化。",
+    "達興官方動土原稿與嘉義二期擴大原始徵詢公告已取得；嘉義附件PDF、園區道路與地籍文件仍未完成逐案對應。",
+    "欣興MOPS原站3037／115年9月列表可讀，9月30日購置不動產明細按鈕未成功顯示內文；交易數值與2029／2030時程尚待公告明細核對。大立光上週採公告轉載，未於本次補取原站全文。",
+    "美光四基地進度採可追溯的記者引述公司談話，尚未取得公司原始稿；其他搜尋線索包含聚和屏東聯貸建廠、特用化學業擴產，尚未完成原始公告查核，不納入確認資料。",
+    "中科與竹科最新清單及投資原稿已讀；竹科清單首頁至9月30日，更早的9月29日及回補期間尚非全量覆蓋。未公開中科投資案不推認公司或廠址。",
+    "wmux本次導覽可回報成功，但文字擷取僅回外層介面，截圖逾時；改用可見Codex瀏覽器完成已列來源。已讀原稿未遇付費牆或CAPTCHA，此結論不代表未查來源可用。",
+    "既有主資料仍有11件工程及22個海選據點未附來源網址；既有網址未逐一驗證內容或連通性。新增3據點官方URL已實際讀取，精確地籍及座標未核驗，地圖海選點僅沿用縣市示意。"
+  ]
+}
+;

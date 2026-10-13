@@ -2,7 +2,7 @@ window.TECH_DB = {
   "meta": {
     "title": "台灣科技廠房新建案資料庫",
     "description": "記錄台灣科技公司在各縣市布局的土地取得與廠房興建案件，重點欄位為土地坪數、建物/樓地板坪數與廠房類型，供科技廠房布局與工程需求追蹤使用。",
-    "updated": "2026-09-07",
+    "updated": "2026-10-05",
     "schema_version": "1.1",
     "screening_scope": "第一階段海選：台灣主要半導體、封裝測試、PCB/載板、顯示器、電子代工、AI伺服器與資料中心業者；未標示公開坪數者先留空，後續逐案查證。",
     "disclaimer": "本資料來自公開新聞與法說資料整理，金額、坪數與時程以官方公告為準；未標註來源或標註「傳」的案件請務必回溯源頭驗證。",
@@ -66,7 +66,10 @@ window.TECH_DB = {
     { "id": "compal", "name": "仁寶電腦", "name_en": "Compal", "industry": "電子代工/AI伺服器", "listed_code": "2324", "note": "桃園製造與研發據點" },
     { "id": "wiwynn", "name": "緯穎科技", "name_en": "Wiwynn", "industry": "AI伺服器", "listed_code": "6669", "note": "AI伺服器與資料中心系統製造布局" },
     { "id": "liteon", "name": "光寶科技", "name_en": "Lite-On", "industry": "電源/AI伺服器", "listed_code": "2301", "note": "桃園與台灣各地電源及伺服器設備布局" },
-    { "id": "chicony", "name": "群光電子", "name_en": "Chicony", "industry": "電子零組件", "listed_code": "2385", "note": "新北與桃園電子製造據點" }
+    { "id": "chicony", "name": "群光電子", "name_en": "Chicony", "industry": "電子零組件", "listed_code": "2385", "note": "新北與桃園電子製造據點" },
+    {"id": "ampower", "name": "安葆電能", "name_en": "Ampower", "industry": "電力系統/儲能設備", "listed_code": "", "note": "公司官方揭露台南二廠動土；支援半導體與資料中心等電力工程。"},
+    {"id": "daxin", "name": "達興材料", "name_en": "", "industry": "半導體材料", "listed_code": "", "note": "橋頭一期新廠動土由高雄市政府確認。"},
+    {"id": "taiwan_hansol", "name": "台灣韓松電子材料", "name_en": "", "industry": "半導體材料", "listed_code": "", "note": "韓商韓松化學申請於橋頭園區投資設立；2026-10-01核准入園。"}
   ],
   "projects": [
     {
@@ -283,7 +286,30 @@ window.TECH_DB = {
       "lat": 24.15,
       "lng": 120.63,
       "source_url": "https://scm.sinotrade.com.tw/Article/Inner/77ac2345-c63c-412e-a22d-29760ecd21a4",
-      "note": "2026/6~8月66天內連續5筆約63億元，1.35萬坪土地、1.3萬坪建物；買地後動工速度快，值得追蹤"
+      "note": "原2026/6~8五筆交易彙整：約63億元、土地約1.35萬坪、建物約1.3萬坪；現有面積欄位仍保留此歷史口徑，未含以下新增單筆。2026-09-17另公告取得南屯區精科東路10號既有土地及廠房：土地約2,259.25坪、建物約3,695.25坪、總額11.72億元，用於未來擴充產能；未公告動工或完工日。CPO用途屬媒體解讀。",
+      "sources": [
+        {
+          "title": "大立光 公告本公司取得不動產相關訊息",
+          "source_name": "MoneyDJ（公開資訊觀測站重大訊息轉載）",
+          "url": "https://5850web.moneydj.com/z/zf/zfz/zfz_3A280CD4-3DE6-495C-8D9F-0D8B454174E2.djhtm",
+          "published_date": "2026-09-17",
+          "accessed_date": "2026-09-29",
+          "source_type": "mops_reprint",
+          "confidence": "高（公告轉載）",
+          "note": "已讀取條列全文；本次未直接取得 MOPS 原站公告。"
+        },
+        {
+          "title": "大立光再砸11.72億元購入台中精密機械園區土地廠房",
+          "source_name": "鉅亨網",
+          "url": "https://news.cnyes.com/news/id/6609411",
+          "published_date": "2026-09-17",
+          "accessed_date": "2026-09-29",
+          "source_type": "media",
+          "confidence": "中高",
+          "note": "公告數值與 MoneyDJ 轉載一致；CPO 用途為市場解讀。"
+        }
+      ],
+      "last_checked": "2026-09-29"
     },
     {
       "id": "p013",
@@ -1064,8 +1090,31 @@ window.TECH_DB = {
       "building_area_ping": 13000,
       "facility_setting": "光學鏡頭、CPO/光通訊、精密製造",
       "source_url": "https://scm.sinotrade.com.tw/Article/Inner/77ac2345-c63c-412e-a22d-29760ecd21a4",
-      "data_status": "土地與建物坪數有公開報導",
-      "note": "與建設案件 p012 對應"
+      "data_status": "原彙整面積保留；2026-09-17單筆交易依MOPS公告轉載核對，未合併加總",
+      "note": "對應集合案p012；原土地13,500坪、建物13,000坪為2026/6~8五筆交易彙整，未含以下新增單筆。2026-09-17另公告取得南屯區精科東路10號既有土地及廠房：土地約2,259.25坪、建物約3,695.25坪、總額11.72億元，用於未來擴充產能；未公告動工或完工日。CPO用途屬媒體解讀。",
+      "sources": [
+        {
+          "title": "大立光 公告本公司取得不動產相關訊息",
+          "source_name": "MoneyDJ（公開資訊觀測站重大訊息轉載）",
+          "url": "https://5850web.moneydj.com/z/zf/zfz/zfz_3A280CD4-3DE6-495C-8D9F-0D8B454174E2.djhtm",
+          "published_date": "2026-09-17",
+          "accessed_date": "2026-09-29",
+          "source_type": "mops_reprint",
+          "confidence": "高（公告轉載）",
+          "note": "已讀取條列全文；本次未直接取得 MOPS 原站公告。"
+        },
+        {
+          "title": "大立光再砸11.72億元購入台中精密機械園區土地廠房",
+          "source_name": "鉅亨網",
+          "url": "https://news.cnyes.com/news/id/6609411",
+          "published_date": "2026-09-17",
+          "accessed_date": "2026-09-29",
+          "source_type": "media",
+          "confidence": "中高",
+          "note": "公告數值與 MoneyDJ 轉載一致；CPO 用途為市場解讀。"
+        }
+      ],
+      "last_checked": "2026-09-29"
     },
     {
       "id": "s041",
@@ -1231,6 +1280,117 @@ window.TECH_DB = {
       "source_url": "https://www.nanyapcb.com.tw/nypcb/chinese/AboutNanYaPCB/CompanyProfile/Company",
       "data_status": "公司官方據點已確認，坪數待查",
       "note": "南亞電路板官方列為台灣生產據點"
+    },
+    {
+      "id": "s052",
+      "company_id": "ampower",
+      "county": "台南市",
+      "district": "永康區",
+      "park": "園區名稱未揭露",
+      "site_name": "安葆台南二廠",
+      "site_status": "施工中",
+      "land_area_ping": 1000,
+      "building_area_ping": null,
+      "facility_setting": "儲能電池櫃、控制系統、工程預製組件製造與系統整合、中壓測試設施",
+      "source_url": "https://www.ampower.com.tw/index.php/2026/09/23/ampower-breaks-ground-on-second-tainan-plant/",
+      "data_status": "官方確認動土，占地約1,000坪；建物面積與精確廠址、座標待查",
+      "note": "2026-09-16動土；預計2027年第二季完工（非已完工）。土地面積為官方約數；尚無精確座標，未另新增地圖工程案。",
+      "sources": [
+        {
+          "title": "安葆台南二廠正式動土：擴建模組化預製產能，深化工程整合實力",
+          "source_name": "安葆電能",
+          "url": "https://www.ampower.com.tw/index.php/2026/09/23/ampower-breaks-ground-on-second-tainan-plant/",
+          "published_date": "2026-09-23",
+          "accessed_date": "2026-09-29",
+          "source_type": "official",
+          "confidence": "高"
+        }
+      ],
+      "last_checked": "2026-09-29"
+    },
+    {
+      "id": "s053",
+      "company_id": "daxin",
+      "county": "高雄市",
+      "district": "橋頭區",
+      "park": "橋頭科學園區",
+      "site_name": "達興材料橋頭一期研發生產廠",
+      "site_status": "施工中",
+      "land_area_ping": null,
+      "building_area_ping": null,
+      "facility_setting": "半導體及關鍵原材料研發、生產",
+      "source_url": "https://www.kcg.gov.tw/News_Content.aspx?n=F29A02A9D36C47F0&sms=19902EF36D6B551D&s=896060FD70C8CA8C",
+      "data_status": "官方證據已核對；土地與建物坪數、精確基地位置待查",
+      "note": "2026-09-24舉行一期新廠動土；未以媒體金額、面積或完工日補填。本次未重新核驗地籍與精確座標，先列海選據點，不新增工程定位。",
+      "sources": [
+        {
+          "title": "特用材料供應大廠達興材料高雄橋頭一期新廠動土 強化南部半導體供應鏈",
+          "source_name": "高雄市政府經濟發展局",
+          "url": "https://www.kcg.gov.tw/News_Content.aspx?n=F29A02A9D36C47F0&sms=19902EF36D6B551D&s=896060FD70C8CA8C",
+          "published_date": "2026-09-29",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高",
+          "note": "頁面發布日為9月29日；內文記載24日動土，事件日與發布日分開。未載本期面積、金額及完工日。"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "s054",
+      "company_id": "nanya_memory",
+      "county": "屏東縣",
+      "district": "待確認",
+      "park": "屏東科學園區",
+      "site_name": "南亞科技屏東分公司（核准入園）",
+      "site_status": "規劃中",
+      "land_area_ping": null,
+      "building_area_ping": null,
+      "facility_setting": "先進半導體3D晶圓封裝及測試、記憶體模組",
+      "source_url": "https://www.stsp.gov.tw/guide/public_info/press/ps_detail.jsp?rep_rfnbr=13143&sc=R",
+      "data_status": "官方證據已核對；土地與建物坪數、精確基地位置待查",
+      "note": "2026-10-01核准入園；尚無本次可採信的動工日、完工日、面積或投資額，不沿用泰山晶圓廠數據。",
+      "sources": [
+        {
+          "title": "國家科學及技術委員會科學園區審議會第35次會議核准投資案",
+          "source_name": "南部科學園區管理局",
+          "url": "https://www.stsp.gov.tw/guide/public_info/press/ps_detail.jsp?rep_rfnbr=13143&sc=R",
+          "published_date": "2026-10-01",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高",
+          "note": "核准投資不等於取得土地、動工或投產；南亞科未揭露金額與面積，台灣韓松投資額8億元。"
+        }
+      ],
+      "last_checked": "2026-10-05"
+    },
+    {
+      "id": "s055",
+      "company_id": "taiwan_hansol",
+      "county": "高雄市",
+      "district": "橋頭區",
+      "park": "橋頭科學園區",
+      "site_name": "台灣韓松橋頭電子材料基地（核准入園）",
+      "site_status": "規劃中",
+      "land_area_ping": null,
+      "building_area_ping": null,
+      "facility_setting": "半導體關鍵化學材料研發與製造",
+      "source_url": "https://www.stsp.gov.tw/guide/public_info/press/ps_detail.jsp?rep_rfnbr=13143&sc=R",
+      "data_status": "官方證據已核對；土地與建物坪數、精確基地位置待查",
+      "note": "2026-10-01核准投資8億元；未公告本次基地坪數、取得土地、動工日或完工日。",
+      "sources": [
+        {
+          "title": "國家科學及技術委員會科學園區審議會第35次會議核准投資案",
+          "source_name": "南部科學園區管理局",
+          "url": "https://www.stsp.gov.tw/guide/public_info/press/ps_detail.jsp?rep_rfnbr=13143&sc=R",
+          "published_date": "2026-10-01",
+          "accessed_date": "2026-10-05",
+          "source_type": "official",
+          "confidence": "高",
+          "note": "核准投資不等於取得土地、動工或投產；南亞科未揭露金額與面積，台灣韓松投資額8億元。"
+        }
+      ],
+      "last_checked": "2026-10-05"
     }
   ]
 }
